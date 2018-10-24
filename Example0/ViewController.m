@@ -49,72 +49,160 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib
-
-   /*
     
-    线程调度和操作队列
+    dispatch_queue_t queue = dispatch_queue_create("queue1", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_sync(queue, ^{
+        NSLog(@"currentThread: %@\n currentQueue: %@",[NSThread currentThread], dispatch_get_current_queue());
+    });
     
     
     
-    通过[[NSOperationQueue alloc] init]这种方式得到的队列，它同时具备并发和串行的特征
-    maxConcurrentOperationCount,值为0，则不会执行，值为1，队列中所有的任务都会串行执行的，不过，串行执行并不等于只开一条线程，当值大于0时，那么队列就是并发队列了。
-    
-    */
-//    dispatch_apply(10, dispatch_get_global_queue(0, 0), ^(size_t idx) {
-//        NSLog(@"%zu------%@",idx,[NSThread currentThread]);
+//    dispatch_queue_t queueA = dispatch_queue_create("queueA", NULL);
+//    dispatch_queue_t queueB = dispatch_queue_create("queueB", NULL);
+//
+//    dispatch_set_target_queue(queueB, queueA);
+//    static int kQueueSpecific;
+//    CFStringRef queueSpecificValue = CFSTR("queueA");
+//    dispatch_queue_set_specific(queueA, &kQueueSpecific, (void *)queueSpecificValue, (dispatch_function_t)CFRelease);
+//
+//
+//    dispatch_sync(queueB, ^{
+//        dispatch_block_t block = ^{
+//            NSLog(@"No deadlock----%@",[NSThread currentThread]);
+//        };
+//        CFStringRef retrivedValue = dispatch_get_specific(&kQueueSpecific);
+//        if (retrivedValue) {
+//            block();
+//        }else
+//        {
+//            dispatch_sync(queueA, block);
+//        }
 //    });
 //
     
     
-    dispatch_group_t group = dispatch_group_create();
-    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
-    NSMutableArray *array = [NSMutableArray array];
-    [array addObject:@"hello"];
-    [array addObject:@"world"];
     
-    for (NSString *string in array) {
-        dispatch_group_enter(group);
-        dispatch_group_async(group, queue, ^{
-        NSLog(@"%@-----%@",string,[NSThread currentThread]);
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                dispatch_group_leave(group);
-            });
-        });
-    }
+    /*
+     线程是代码执行的路径，队列则是用于保存以及管理任务的，线程负责去队列中取任务进行执行
+     */
+    //由于当前任务是在主队列中执行的，而serialQueue是新创建的queue，虽然h是同步执行，但并不是同一个queue，所以不会造成同步死锁
     
-    dispatch_async(queue, ^{
-        dispatch_group_wait(group, dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC));
-        NSLog(@"dispatch_group_wait 结束");
-    });
+    //        if (dispatch_get_current_queue() == queue) {
+    //            NSLog(@"currentThread:%@------currentQueue:%@",[NSThread currentThread],dispatch_get_current_queue());
+    //        }else
+    //        {
+    //            NSLog(@"currentThread:%@------currentQueue:%@",[NSThread currentThread],dispatch_get_current_queue());
+    //        }
     
-//    dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
-    dispatch_group_notify(group, queue, ^{
-         NSLog(@"iiiiiiiiiiiiiiiiii");
-    });
-//
-//    NSLog(@"oooooooooooooooooooo");
-    
-//    dispatch_group_notify(group, queue, ^{
-//
-//    });
+    //    });
     
     
-    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, (self.view.js_width-100)/2, 44)];
-    btn.backgroundColor = [UIColor greenColor];
-    [btn setTitle:@"button" forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
-    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.view addSubview:btn];
+    //    dispatch_queue_t queueA = dispatch_queue_create("serialQueueA.com.cn", NULL);
+    //    dispatch_queue_t queueB = dispatch_queue_create("serialQueueB.com.cn", NULL);
+    //
+    //    dispatch_set_target_queue(queueB, queueA);
+    //
+    //    static int kQueueSpecific;
+    //    CFStringRef queueSpecificValue = CFSTR("queueA");
+    //    dispatch_queue_set_specific(queueA, &kQueueSpecific, (void *)queueSpecificValue, (dispatch_function_t)CFRelease);
+    //    dispatch_sync(queueB, ^{
+    //        dispatch_block_t block = ^{
+    //            NSLog(@"1111111111");
+    //        };
+    //        CFStringRef retrivedValue = dispatch_get_specific(&kQueueSpecific);
+    //        if (retrivedValue) {
+    //            NSLog(@"2222222");
+    //        }else
+    //        {
+    //            dispatch_sync(queueA, block);
+    //        }
+    //
+    //    });
+    //
     
-    UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(100, 100+50, (self.view.js_width-100)/2, 44)];
-    btn2.backgroundColor = [UIColor greenColor];
-    [btn2 setTitle:@"button2" forState:UIControlStateNormal];
-    [btn2 addTarget:self action:@selector(button2Clicked) forControlEvents:UIControlEventTouchUpInside];
-    [btn2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.view addSubview:btn2];
     
     
-//    dispatch_get_current_queue();
+    //    dispatch_sync(queueA, ^{
+    //        dispatch_sync(queueB, ^{
+    //            dispatch_block_t block = ^{
+    //                NSLog(@"222222222222");
+    //            };
+    //            if (dispatch_get_current_queue() == queueA) {
+    //                NSLog(@"11111111111");
+    //            }else
+    //            {
+    //                dispatch_sync(queueA, block);
+    //            }
+    //
+    //
+    //        });
+    //    });
+    
+    /*
+     
+     线程调度和操作队列
+     
+     
+     
+     通过[[NSOperationQueue alloc] init]这种方式得到的队列，它同时具备并发和串行的特征
+     maxConcurrentOperationCount,值为0，则不会执行，值为1，队列中所有的任务都会串行执行的，不过，串行执行并不等于只开一条线程，当值大于0时，那么队列就是并发队列了。
+     
+     */
+    //    dispatch_apply(10, dispatch_get_global_queue(0, 0), ^(size_t idx) {
+    //        NSLog(@"%zu------%@",idx,[NSThread currentThread]);
+    //    });
+    //
+    
+    
+    //    dispatch_group_t group = dispatch_group_create();
+    //    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    //    NSMutableArray *array = [NSMutableArray array];
+    //    [array addObject:@"hello"];
+    //    [array addObject:@"world"];
+    //
+    //    for (NSString *string in array) {
+    //        dispatch_group_enter(group);
+    //        dispatch_group_async(group, queue, ^{
+    //        NSLog(@"%@-----%@",string,[NSThread currentThread]);
+    //            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    //                dispatch_group_leave(group);
+    //            });
+    //        });
+    //    }
+    //
+    //    dispatch_async(queue, ^{
+    //        dispatch_group_wait(group, dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC));
+    //        NSLog(@"dispatch_group_wait 结束");
+    //    });
+    
+    //    dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+    //    dispatch_group_notify(group, queue, ^{
+    //         NSLog(@"iiiiiiiiiiiiiiiiii");
+    //    });
+    //
+    //    NSLog(@"oooooooooooooooooooo");
+    
+    //    dispatch_group_notify(group, queue, ^{
+    //
+    //    });
+    
+    
+    //    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, (self.view.js_width-100)/2, 44)];
+    //    btn.backgroundColor = [UIColor greenColor];
+    //    [btn setTitle:@"button" forState:UIControlStateNormal];
+    //    [btn addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
+    //    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    //    [self.view addSubview:btn];
+    //
+    //    UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(100, 100+50, (self.view.js_width-100)/2, 44)];
+    //    btn2.backgroundColor = [UIColor greenColor];
+    //    [btn2 setTitle:@"button2" forState:UIControlStateNormal];
+    //    [btn2 addTarget:self action:@selector(button2Clicked) forControlEvents:UIControlEventTouchUpInside];
+    //    [btn2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    //    [self.view addSubview:btn2];
+    
+    
+    //    dispatch_get_current_queue();
     
     
     

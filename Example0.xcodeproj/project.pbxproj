@@ -81,6 +81,7 @@
 		921913DE215F720000508F46 /* GetImageAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 921913DD215F720000508F46 /* GetImageAPI.m */; };
 		921913E4215F746900508F46 /* YTKUrlArgumentsFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 921913E2215F746900508F46 /* YTKUrlArgumentsFilter.m */; };
 		921913F3215F7EBC00508F46 /* UploadImageAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 921913F1215F7EBC00508F46 /* UploadImageAPI.m */; };
+		929C37BD21806D7900C0F883 /* Capture47.m in Sources */ = {isa = PBXBuildFile; fileRef = 929C37BC21806D7900C0F883 /* Capture47.m */; };
 		92A96F9E217EF0560048B285 /* SwiftInstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A96F9D217EF0560048B285 /* SwiftInstruction.m */; };
 		92BCAEAC21465FFF00D30B1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BCAEAB21465FFF00D30B1E /* AppDelegate.m */; };
 		92BCAEAF21465FFF00D30B1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BCAEAE21465FFF00D30B1E /* ViewController.m */; };
@@ -242,6 +243,8 @@
 		921913E3215F746900508F46 /* YTKUrlArgumentsFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKUrlArgumentsFilter.h; sourceTree = "<group>"; };
 		921913F1215F7EBC00508F46 /* UploadImageAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadImageAPI.m; sourceTree = "<group>"; };
 		921913F2215F7EBC00508F46 /* UploadImageAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadImageAPI.h; sourceTree = "<group>"; };
+		929C37BB21806D7900C0F883 /* Capture47.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture47.h; sourceTree = "<group>"; };
+		929C37BC21806D7900C0F883 /* Capture47.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Capture47.m; sourceTree = "<group>"; };
 		92A96F9C217EF0560048B285 /* SwiftInstruction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftInstruction.h; sourceTree = "<group>"; };
 		92A96F9D217EF0560048B285 /* SwiftInstruction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftInstruction.m; sourceTree = "<group>"; };
 		92BCAEA721465FFF00D30B1E /* Example0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example0.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -565,6 +568,15 @@
 			path = Section2;
 			sourceTree = "<group>";
 		};
+		929C37BA21806D6100C0F883 /* Section7 */ = {
+			isa = PBXGroup;
+			children = (
+				929C37BB21806D7900C0F883 /* Capture47.h */,
+				929C37BC21806D7900C0F883 /* Capture47.m */,
+			);
+			path = Section7;
+			sourceTree = "<group>";
+		};
 		92BCAE9E21465FFF00D30B1E = {
 			isa = PBXGroup;
 			children = (
@@ -586,6 +598,7 @@
 		92BCAEA921465FFF00D30B1E /* Example0 */ = {
 			isa = PBXGroup;
 			children = (
+				929C37BA21806D6100C0F883 /* Section7 */,
 				92A96F9C217EF0560048B285 /* SwiftInstruction.h */,
 				92A96F9D217EF0560048B285 /* SwiftInstruction.m */,
 				920AB0C12178655A00FD304B /* Section6 */,
@@ -788,6 +801,7 @@
 				92BCAEAC21465FFF00D30B1E /* AppDelegate.m in Sources */,
 				920501452170A66B00D87150 /* Capture11.m in Sources */,
 				92071D6A217486BA00D374A3 /* Capture17.m in Sources */,
+				929C37BD21806D7900C0F883 /* Capture47.m in Sources */,
 				92071D4F21747AA900D374A3 /* JSCombination.m in Sources */,
 				920AB0D5217881DB00FD304B /* Capture40.m in Sources */,
 				9205011A2170420700D87150 /* Capture7.m in Sources */,
@@ -967,6 +981,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3HN45NE646;
 				INFOPLIST_FILE = Example0/Info.plist;
@@ -987,6 +1002,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3HN45NE646;
 				INFOPLIST_FILE = Example0/Info.plist;

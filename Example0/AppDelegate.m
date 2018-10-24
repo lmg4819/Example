@@ -61,9 +61,9 @@ void function(){
     for (int i=0; i<1000; i++) {
         for (int j=0; j<200; j++) {
             for (int k=0; k<142; k++) {
-                if ((i+5*j+7*k >= 100) && (i+5*j+7*k <= 100)) {
+                if ((i+5*j+7*k >= 100) && (i+5*j+7*k <= 1000)) {
 
-                    if (i+j+k == 16) {
+                    if (i+j+k == 15) {
                         NSLog(@"i:%d,j:%d,k:%d,count:%d",i,j,k,i+j+k);
                     }
                     [array addObject:@(i+j+k)];
@@ -77,8 +77,7 @@ void function(){
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    function();
-    
+//    function();
     NSUserActivity *userActivity = [[NSUserActivity alloc] initWithActivityType:@"loying.LearnSiriShortcut.type"];
     if (@available(iOS 12.0, *)) // 如果要支持老版本，加上判断
     {
