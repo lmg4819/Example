@@ -1,0 +1,1 @@
+../../../JSPhotoBrowser/JSPhotoBrowser/Classes/JSPhotoBrowser/NSBundle+Category.h

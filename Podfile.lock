@@ -1,0 +1,145 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - Aspects (1.4.1)
+  - CHTCollectionViewWaterfallLayout (0.9.7):
+    - CHTCollectionViewWaterfallLayout/ObjC (= 0.9.7)
+  - CHTCollectionViewWaterfallLayout/ObjC (0.9.7)
+  - Colours (5.13.0):
+    - Colours/ObjC (= 5.13.0)
+  - Colours/ObjC (5.13.0)
+  - DZNEmptyDataSet (1.8.1)
+  - FBRetainCycleDetector (0.1.4)
+  - FDFullscreenPopGesture (1.1)
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
+  - HJCornerRadius (0.0.1)
+  - HYBImageCliped (2.2.4)
+  - IQKeyboardManager (6.1.1)
+  - JPFPSStatus (0.1.1)
+  - JSPhotoBrowser (0.2.0):
+    - SDWebImage (>= 4.0.0)
+  - MBProgressHUD (1.1.0)
+  - MJRefresh (3.1.15.7)
+  - MLeaksFinder (1.0.0):
+    - FBRetainCycleDetector
+  - MyLibrary (0.7.0):
+    - SDWebImage (>= 4.0.0)
+  - ReactiveObjC (3.1.0)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - "UITableView+FDTemplateLayoutCell (1.6)"
+  - YTKKeyValueStore (0.1.2):
+    - FMDB (~> 2.0)
+  - YTKNetwork (2.0.4):
+    - AFNetworking (~> 3.0)
+  - YYModel (1.0.4)
+  - YZDisplayViewController (1.0.6)
+  - ZYCornerRadius (1.0.2)
+
+DEPENDENCIES:
+  - Aspects (= 1.4.1)
+  - Aspects (~> 1.4.1)
+  - CHTCollectionViewWaterfallLayout (~> 0.9.7)
+  - Colours (~> 5.13.0)
+  - DZNEmptyDataSet (~> 1.8.1)
+  - FDFullscreenPopGesture (~> 1.1)
+  - HJCornerRadius (from `https://github.com/panghaijiao/HJCornerRadius.git`)
+  - HYBImageCliped (~> 2.2.4)
+  - IQKeyboardManager (~> 6.1.1)
+  - JPFPSStatus (~> 0.1.1)
+  - JSPhotoBrowser (= 0.2.0)
+  - MBProgressHUD (~> 1.1.0)
+  - MJRefresh
+  - MLeaksFinder (~> 1.0.0)
+  - MyLibrary (= 0.7.0)
+  - ReactiveObjC (~> 3.1.0)
+  - "UITableView+FDTemplateLayoutCell (~> 1.6)"
+  - YTKKeyValueStore (~> 0.1.2)
+  - YTKNetwork (= 2.0.4)
+  - YYModel (~> 1.0.4)
+  - YZDisplayViewController (~> 1.0.6)
+  - ZYCornerRadius (~> 1.0.2)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - Aspects
+    - CHTCollectionViewWaterfallLayout
+    - Colours
+    - DZNEmptyDataSet
+    - FBRetainCycleDetector
+    - FDFullscreenPopGesture
+    - FMDB
+    - HYBImageCliped
+    - IQKeyboardManager
+    - JPFPSStatus
+    - MBProgressHUD
+    - MJRefresh
+    - MLeaksFinder
+    - ReactiveObjC
+    - SDWebImage
+    - "UITableView+FDTemplateLayoutCell"
+    - YTKKeyValueStore
+    - YTKNetwork
+    - YYModel
+    - YZDisplayViewController
+    - ZYCornerRadius
+  https://github.com/lmg4819/PrivateRepo.git:
+    - JSPhotoBrowser
+    - MyLibrary
+
+EXTERNAL SOURCES:
+  HJCornerRadius:
+    :git: https://github.com/panghaijiao/HJCornerRadius.git
+
+CHECKOUT OPTIONS:
+  HJCornerRadius:
+    :commit: fd82fdef4407b898dd055ceeb5a5337953206914
+    :git: https://github.com/panghaijiao/HJCornerRadius.git
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  CHTCollectionViewWaterfallLayout: 9d11068fafecac106695bb5a5d6d0f738483b598
+  Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  HJCornerRadius: 0af191386b5f2e9c4465739b5db22c0acc52923b
+  HYBImageCliped: 22d14431324bc9d056353d6f1490a3bd03fc7dff
+  IQKeyboardManager: 79c57795f5c2408d259d37b9da2ed07efcbb5225
+  JPFPSStatus: 03f32aa3d4d7d0c5bf56f6f3e7cf8b7280a5f52c
+  JSPhotoBrowser: afef16c8fcb10be1a67d318665399a58362c4b00
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
+  MyLibrary: 32524421c793ac3817a2e25708171bc79d603566
+  ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  YTKKeyValueStore: 4d002941540dd5108fa23009b71e0f2f937f7a0f
+  YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  YZDisplayViewController: 621f737a9aa3dfbc95a901e89e5e7c4b2ea6ef79
+  ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
+
+PODFILE CHECKSUM: ffad962964d08c7772df83d9dfaff1d81aefb986
+
+COCOAPODS: 1.5.3
