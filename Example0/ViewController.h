@@ -11,12 +11,6 @@
 @interface ViewController : UIViewController
 
 /*
- 视图渲染
- 1.CoreAnimation提交回话，包括自己和字视图的layout状态等。
- 2.RenderServer解析提交的子树状态，生成绘制指令。
- 3.GPU执行绘制指令。
- 4.显示渲染后的数据。
- 
  
  */
 
