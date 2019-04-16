@@ -20,6 +20,7 @@
 #import "JSCombination.h"
 #import "EOCClass.h"
 #import <OpenGLES/EAGL.h>
+#import "EOCSecondViewController.h"
 
 
 
@@ -32,7 +33,9 @@
 @end
 
 @implementation ViewController
-
+{
+    NSTimer *_timer;
+}
 - (void)myTask
 {
     for (NSInteger i = 0; i < 500000000; i++) {
@@ -46,16 +49,16 @@
     
 }
 
+- (void)startPolling
+{
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib
     
-    dispatch_queue_t queue = dispatch_queue_create("queue1", DISPATCH_QUEUE_CONCURRENT);
-    dispatch_sync(queue, ^{
-        NSLog(@"currentThread: %@\n currentQueue: %@",[NSThread currentThread], dispatch_get_current_queue());
-    });
-    
-    
+    _timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(startPolling) userInfo:nil repeats:YES];
     
 //    dispatch_queue_t queueA = dispatch_queue_create("queueA", NULL);
 //    dispatch_queue_t queueB = dispatch_queue_create("queueB", NULL);
@@ -187,19 +190,19 @@
     //    });
     
     
-    //    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, (self.view.js_width-100)/2, 44)];
-    //    btn.backgroundColor = [UIColor greenColor];
-    //    [btn setTitle:@"button" forState:UIControlStateNormal];
-    //    [btn addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
-    //    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //    [self.view addSubview:btn];
-    //
-    //    UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(100, 100+50, (self.view.js_width-100)/2, 44)];
-    //    btn2.backgroundColor = [UIColor greenColor];
-    //    [btn2 setTitle:@"button2" forState:UIControlStateNormal];
-    //    [btn2 addTarget:self action:@selector(button2Clicked) forControlEvents:UIControlEventTouchUpInside];
-    //    [btn2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //    [self.view addSubview:btn2];
+        UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, (self.view.js_width-100)/2, 44)];
+        btn.backgroundColor = [UIColor greenColor];
+        [btn setTitle:@"button" forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
+        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self.view addSubview:btn];
+    
+        UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(100, 100+50, (self.view.js_width-100)/2, 44)];
+        btn2.backgroundColor = [UIColor greenColor];
+        [btn2 setTitle:@"button2" forState:UIControlStateNormal];
+        [btn2 addTarget:self action:@selector(button2Clicked) forControlEvents:UIControlEventTouchUpInside];
+        [btn2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self.view addSubview:btn2];
     
     
     //    dispatch_get_current_queue();
@@ -213,8 +216,8 @@
 
 - (void)buttonClicked
 {
-    char *a = malloc(100*1024*1024);
-    NSLog(@"%p",a);
+    EOCSecondViewController *vc = [[EOCSecondViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)button2Clicked

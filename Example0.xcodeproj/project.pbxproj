@@ -72,6 +72,12 @@
 		920AB0D221787B3C00FD304B /* Capture39.m in Sources */ = {isa = PBXBuildFile; fileRef = 920AB0D121787B3C00FD304B /* Capture39.m */; };
 		920AB0D5217881DB00FD304B /* Capture40.m in Sources */ = {isa = PBXBuildFile; fileRef = 920AB0D4217881DB00FD304B /* Capture40.m */; };
 		920AB0D82178873100FD304B /* Capture41.m in Sources */ = {isa = PBXBuildFile; fileRef = 920AB0D72178873100FD304B /* Capture41.m */; };
+		920B450021815C2300A2FF8D /* JSQuestionAndAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = 920B44FF21815C2300A2FF8D /* JSQuestionAndAnswer.m */; };
+		920B450321815D4500A2FF8D /* Capture48.m in Sources */ = {isa = PBXBuildFile; fileRef = 920B450221815D4500A2FF8D /* Capture48.m */; };
+		920B4506218160A400A2FF8D /* Capture49.m in Sources */ = {isa = PBXBuildFile; fileRef = 920B4505218160A400A2FF8D /* Capture49.m */; };
+		920B45092181610C00A2FF8D /* Capture50.m in Sources */ = {isa = PBXBuildFile; fileRef = 920B45082181610C00A2FF8D /* Capture50.m */; };
+		920B450C218163A600A2FF8D /* Capture51.m in Sources */ = {isa = PBXBuildFile; fileRef = 920B450B218163A600A2FF8D /* Capture51.m */; };
+		920B450F21816D3F00A2FF8D /* Capture52.m in Sources */ = {isa = PBXBuildFile; fileRef = 920B450E21816D3F00A2FF8D /* Capture52.m */; };
 		920BEBEC216EE71400DDE9F3 /* Capture1.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BEBEB216EE71400DDE9F3 /* Capture1.m */; };
 		920BEBEF216EF3D600DDE9F3 /* Capture2.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BEBEE216EF3D600DDE9F3 /* Capture2.m */; };
 		920BEBFC216F1AEE00DDE9F3 /* Capture3.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BEBFB216F1AEE00DDE9F3 /* Capture3.m */; };
@@ -82,6 +88,8 @@
 		921913DE215F720000508F46 /* GetImageAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 921913DD215F720000508F46 /* GetImageAPI.m */; };
 		921913E4215F746900508F46 /* YTKUrlArgumentsFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 921913E2215F746900508F46 /* YTKUrlArgumentsFilter.m */; };
 		921913F3215F7EBC00508F46 /* UploadImageAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 921913F1215F7EBC00508F46 /* UploadImageAPI.m */; };
+		928E2279218171B100F24D45 /* NSTimer+EOCBlockSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 928E2278218171B100F24D45 /* NSTimer+EOCBlockSupport.m */; };
+		928E227F21818B9500F24D45 /* EOCSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928E227E21818B9400F24D45 /* EOCSecondViewController.m */; };
 		929C37BD21806D7900C0F883 /* Capture47.m in Sources */ = {isa = PBXBuildFile; fileRef = 929C37BC21806D7900C0F883 /* Capture47.m */; };
 		92A96F9E217EF0560048B285 /* SwiftInstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A96F9D217EF0560048B285 /* SwiftInstruction.m */; };
 		92BCAEAC21465FFF00D30B1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BCAEAB21465FFF00D30B1E /* AppDelegate.m */; };
@@ -226,6 +234,18 @@
 		920AB0D4217881DB00FD304B /* Capture40.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Capture40.m; sourceTree = "<group>"; };
 		920AB0D62178873100FD304B /* Capture41.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture41.h; sourceTree = "<group>"; };
 		920AB0D72178873100FD304B /* Capture41.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Capture41.m; sourceTree = "<group>"; };
+		920B44FE21815C2300A2FF8D /* JSQuestionAndAnswer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSQuestionAndAnswer.h; sourceTree = "<group>"; };
+		920B44FF21815C2300A2FF8D /* JSQuestionAndAnswer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSQuestionAndAnswer.m; sourceTree = "<group>"; };
+		920B450121815D4500A2FF8D /* Capture48.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture48.h; sourceTree = "<group>"; };
+		920B450221815D4500A2FF8D /* Capture48.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Capture48.m; sourceTree = "<group>"; };
+		920B4504218160A400A2FF8D /* Capture49.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture49.h; sourceTree = "<group>"; };
+		920B4505218160A400A2FF8D /* Capture49.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Capture49.m; sourceTree = "<group>"; };
+		920B45072181610C00A2FF8D /* Capture50.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture50.h; sourceTree = "<group>"; };
+		920B45082181610C00A2FF8D /* Capture50.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Capture50.m; sourceTree = "<group>"; };
+		920B450A218163A600A2FF8D /* Capture51.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture51.h; sourceTree = "<group>"; };
+		920B450B218163A600A2FF8D /* Capture51.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Capture51.m; sourceTree = "<group>"; };
+		920B450D21816D3F00A2FF8D /* Capture52.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture52.h; sourceTree = "<group>"; };
+		920B450E21816D3F00A2FF8D /* Capture52.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Capture52.m; sourceTree = "<group>"; };
 		920BEBEA216EE71400DDE9F3 /* Capture1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture1.h; sourceTree = "<group>"; };
 		920BEBEB216EE71400DDE9F3 /* Capture1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Capture1.m; sourceTree = "<group>"; };
 		920BEBED216EF3D600DDE9F3 /* Capture2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture2.h; sourceTree = "<group>"; };
@@ -246,6 +266,10 @@
 		921913E3215F746900508F46 /* YTKUrlArgumentsFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKUrlArgumentsFilter.h; sourceTree = "<group>"; };
 		921913F1215F7EBC00508F46 /* UploadImageAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadImageAPI.m; sourceTree = "<group>"; };
 		921913F2215F7EBC00508F46 /* UploadImageAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadImageAPI.h; sourceTree = "<group>"; };
+		928E2277218171B100F24D45 /* NSTimer+EOCBlockSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+EOCBlockSupport.h"; sourceTree = "<group>"; };
+		928E2278218171B100F24D45 /* NSTimer+EOCBlockSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+EOCBlockSupport.m"; sourceTree = "<group>"; };
+		928E227D21818B9400F24D45 /* EOCSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCSecondViewController.h; sourceTree = "<group>"; };
+		928E227E21818B9400F24D45 /* EOCSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCSecondViewController.m; sourceTree = "<group>"; };
 		929C37BB21806D7900C0F883 /* Capture47.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture47.h; sourceTree = "<group>"; };
 		929C37BC21806D7900C0F883 /* Capture47.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Capture47.m; sourceTree = "<group>"; };
 		92A96F9C217EF0560048B285 /* SwiftInstruction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftInstruction.h; sourceTree = "<group>"; };
@@ -290,6 +314,7 @@
 		9205013E2170804A00D87150 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				928E22762181719600F24D45 /* 52 */,
 				920AB0C921786D9E00FD304B /* 37 */,
 				920AB0C5217865A300FD304B /* 36 */,
 				9208FFBD2177360900F20752 /* 33 */,
@@ -573,11 +598,30 @@
 			path = Section2;
 			sourceTree = "<group>";
 		};
+		928E22762181719600F24D45 /* 52 */ = {
+			isa = PBXGroup;
+			children = (
+				928E2277218171B100F24D45 /* NSTimer+EOCBlockSupport.h */,
+				928E2278218171B100F24D45 /* NSTimer+EOCBlockSupport.m */,
+			);
+			path = 52;
+			sourceTree = "<group>";
+		};
 		929C37BA21806D6100C0F883 /* Section7 */ = {
 			isa = PBXGroup;
 			children = (
 				929C37BB21806D7900C0F883 /* Capture47.h */,
 				929C37BC21806D7900C0F883 /* Capture47.m */,
+				920B450121815D4500A2FF8D /* Capture48.h */,
+				920B450221815D4500A2FF8D /* Capture48.m */,
+				920B4504218160A400A2FF8D /* Capture49.h */,
+				920B4505218160A400A2FF8D /* Capture49.m */,
+				920B45072181610C00A2FF8D /* Capture50.h */,
+				920B45082181610C00A2FF8D /* Capture50.m */,
+				920B450A218163A600A2FF8D /* Capture51.h */,
+				920B450B218163A600A2FF8D /* Capture51.m */,
+				920B450D21816D3F00A2FF8D /* Capture52.h */,
+				920B450E21816D3F00A2FF8D /* Capture52.m */,
 			);
 			path = Section7;
 			sourceTree = "<group>";
@@ -604,9 +648,13 @@
 		92BCAEA921465FFF00D30B1E /* Example0 */ = {
 			isa = PBXGroup;
 			children = (
+				928E227D21818B9400F24D45 /* EOCSecondViewController.h */,
+				928E227E21818B9400F24D45 /* EOCSecondViewController.m */,
 				929C37BA21806D6100C0F883 /* Section7 */,
 				92A96F9C217EF0560048B285 /* SwiftInstruction.h */,
 				92A96F9D217EF0560048B285 /* SwiftInstruction.m */,
+				920B44FE21815C2300A2FF8D /* JSQuestionAndAnswer.h */,
+				920B44FF21815C2300A2FF8D /* JSQuestionAndAnswer.m */,
 				920AB0C12178655A00FD304B /* Section6 */,
 				9208FFAA2177148000F20752 /* EOCNoARC.h */,
 				9208FFAB2177148000F20752 /* EOCNoARC.m */,
@@ -768,13 +816,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				928E227F21818B9500F24D45 /* EOCSecondViewController.m in Sources */,
 				9205013121707B8100D87150 /* EOCEmployee.m in Sources */,
 				9208FFC62177364800F20752 /* EOCExample.m in Sources */,
 				920BEBFC216F1AEE00DDE9F3 /* Capture3.m in Sources */,
+				920B4506218160A400A2FF8D /* Capture49.m in Sources */,
 				92071D292174320B00D374A3 /* Capture12.m in Sources */,
 				9209E10F2175BAEA003CAD3C /* Capture21.m in Sources */,
 				9209E10C2175B7EB003CAD3C /* Capture20.m in Sources */,
 				9208FF8D2176E00200F20752 /* NSString+HTTP.m in Sources */,
+				920B450021815C2300A2FF8D /* JSQuestionAndAnswer.m in Sources */,
 				92091D8D21797D820089A070 /* Capture43.m in Sources */,
 				9208FF902176E08700F20752 /* NSString+EOCURL.m in Sources */,
 				9205012E21707AD700D87150 /* Capture9.m in Sources */,
@@ -821,19 +872,23 @@
 				92091D962179BC370089A070 /* Capture46.m in Sources */,
 				92071D672174839500D374A3 /* EOCSquare.m in Sources */,
 				921913F3215F7EBC00508F46 /* UploadImageAPI.m in Sources */,
+				920B450321815D4500A2FF8D /* Capture48.m in Sources */,
 				92071D5A21747DB700D374A3 /* EOCSoundPlayer.m in Sources */,
+				920B450F21816D3F00A2FF8D /* Capture52.m in Sources */,
 				92091D932179BB140089A070 /* Capture45.m in Sources */,
 				9208FF932176E2F600F20752 /* Capture26.m in Sources */,
 				920AB0C8217865B600FD304B /* EOCRetainCount.m in Sources */,
 				9208FF832176D38200F20752 /* EOCNetworkFetcher.m in Sources */,
 				9205013A21707CB500D87150 /* EOCEmployeeFinance.m in Sources */,
 				921913E4215F746900508F46 /* YTKUrlArgumentsFilter.m in Sources */,
+				928E2279218171B100F24D45 /* NSTimer+EOCBlockSupport.m in Sources */,
 				9208FFB621772ADB00F20752 /* EOCServerConnection.m in Sources */,
 				920BEC07216F498300DDE9F3 /* Capture6.m in Sources */,
 				9208FFC921773A2B00F20752 /* Capture34.m in Sources */,
 				920AB0BD217827D100FD304B /* EOCClass.m in Sources */,
 				9208FFB2217729D700F20752 /* Capture31.m in Sources */,
 				9208FFAC2177148000F20752 /* EOCNoARC.m in Sources */,
+				920B45092181610C00A2FF8D /* Capture50.m in Sources */,
 				92071D642174827B00D374A3 /* EOCRectangle.m in Sources */,
 				92071D6D21748A2000D374A3 /* Capture18.m in Sources */,
 				92091D902179B0320089A070 /* Capture44.m in Sources */,
@@ -843,6 +898,7 @@
 				920AB0B6217823F300FD304B /* Capture35.m in Sources */,
 				920BEC03216F463300DDE9F3 /* Capture5.m in Sources */,
 				9205013421707C8F00D87150 /* EOCEmployeeDeveloper.m in Sources */,
+				920B450C218163A600A2FF8D /* Capture51.m in Sources */,
 				92071D3521743D4E00D374A3 /* EOCAutoDictionary.m in Sources */,
 				921913DE215F720000508F46 /* GetImageAPI.m in Sources */,
 				92071D7121748A9700D374A3 /* EOCPointOfInterest.m in Sources */,
