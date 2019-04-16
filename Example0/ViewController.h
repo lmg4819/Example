@@ -81,3 +81,20 @@
  
  适配器模式，单利模式，观察者模式，委托模式，策略模式，工厂模式，MVC设计模式
  */
+
+
+typedef NS_ENUM(NSUInteger,UserSex) {
+    UserSexMan,
+    UserSexWoman
+};
+
+@interface UserModel : NSObject
+@property(nonatomic,weak) NSString *name;
+@property(nonatomic,assign) NSUInteger age;
+@property(nonatomic,assign) UserSex  sex;
+
+- (instancetype)initModelWithUserName:(NSString *)name WithAge:(NSUInteger)age NS_DESIGNATED_INITIALIZER;
++ (instancetype)userModelWithUserName:(NSString *)name WithAge:(NSUInteger)age;
+
++ (void)logIn;
+@end

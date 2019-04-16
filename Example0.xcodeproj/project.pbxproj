@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58AB809521A948BE00FADF9D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 58AB809421A948BE00FADF9D /* libc++.tbd */; };
 		920500A6215F6C4700C3A8B2 /* RegisterAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 920500A5215F6C4700C3A8B2 /* RegisterAPI.m */; };
 		9205011A2170420700D87150 /* Capture7.m in Sources */ = {isa = PBXBuildFile; fileRef = 920501192170420700D87150 /* Capture7.m */; };
 		92050125217070AE00D87150 /* Capture8.m in Sources */ = {isa = PBXBuildFile; fileRef = 92050124217070AE00D87150 /* Capture8.m */; };
@@ -95,6 +96,8 @@
 /* Begin PBXFileReference section */
 		4F081EBC2C569B620A0F30E9 /* Pods-Example0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example0/Pods-Example0.debug.xcconfig"; sourceTree = "<group>"; };
 		55A68E308E7EB673EEBE605B /* libPods-Example0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		584164ED2199B71A00DE2480 /* sumintc_ex1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sumintc_ex1.m; sourceTree = "<group>"; };
+		58AB809421A948BE00FADF9D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		920500A4215F6C4700C3A8B2 /* RegisterAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterAPI.h; sourceTree = "<group>"; };
 		920500A5215F6C4700C3A8B2 /* RegisterAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterAPI.m; sourceTree = "<group>"; };
 		920501182170420700D87150 /* Capture7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture7.h; sourceTree = "<group>"; };
@@ -265,6 +268,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58AB809521A948BE00FADF9D /* libc++.tbd in Frameworks */,
 				92091D982179D34A0089A070 /* OpenGLES.framework in Frameworks */,
 				F424D7FF07E8D80142BB672D /* libPods-Example0.a in Frameworks */,
 			);
@@ -276,6 +280,7 @@
 		12345997270DDBF25B0B80FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				58AB809421A948BE00FADF9D /* libc++.tbd */,
 				92091D972179D34A0089A070 /* OpenGLES.framework */,
 				55A68E308E7EB673EEBE605B /* libPods-Example0.a */,
 			);
@@ -580,6 +585,7 @@
 		92BCAE9E21465FFF00D30B1E = {
 			isa = PBXGroup;
 			children = (
+				584164ED2199B71A00DE2480 /* sumintc_ex1.m */,
 				92BCAEA921465FFF00D30B1E /* Example0 */,
 				92BCAEA821465FFF00D30B1E /* Products */,
 				92DD0B5CA6E6FF7FDE4F0148 /* Pods */,
