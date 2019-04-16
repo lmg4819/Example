@@ -60,6 +60,9 @@
     
     _timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(startPolling) userInfo:nil repeats:YES];
     
+    
+    
+    
 //    dispatch_queue_t queueA = dispatch_queue_create("queueA", NULL);
 //    dispatch_queue_t queueB = dispatch_queue_create("queueB", NULL);
 //
