@@ -21,202 +21,219 @@
 #import "EOCClass.h"
 #import <OpenGLES/EAGL.h>
 #import "EOCSecondViewController.h"
+#import <TTGTextTagCollectionView.h>
+#import "EOCCPPerson.h"
+#import <JavaScriptCore/JavaScriptCore.h>
+#import "Capture18.h"
+#import <ReactiveObjC.h>
+#import "OrderItem.h"
+#import "EOCSubViewController.h"
+
+@interface JSButton : UIButton
+
+@end
+
+@implementation JSButton
+
+-(void)setHighlighted:(BOOL)highlighted
+{
+    
+}
+
+@end
 
 
-
-@interface ViewController ()<SDCycleScrollViewDelegate,YTKRequestDelegate,UIAlertViewDelegate>
+@interface ViewController ()<SDCycleScrollViewDelegate,YTKRequestDelegate,UIAlertViewDelegate,TTGTextTagCollectionViewDelegate>
 @property (nonatomic,strong) NSArray *imageNameArray;
 @property (nonatomic,strong) UIImageView *imageView;
 @property (nonatomic,strong) NSMutableArray *tempArray;
 @property (nonatomic,strong) dispatch_semaphore_t semephore;
 @property (nonatomic,strong) dispatch_queue_t serialQueue;
+@property (nonatomic,assign) NSInteger currentIndex;
+@property (nonatomic,strong) EOCCPPerson *person;
 @end
 
 @implementation ViewController
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
 {
-    NSTimer *_timer;
-}
-- (void)myTask
-{
-    for (NSInteger i = 0; i < 500000000; i++) {
-        if (i == 0) {
-            NSLog(@"任务 -> 开始---%@",[NSThread currentThread]);
-        }
-        if (i == 499999999) {
-            NSLog(@"任务 -> 完成---%@",[NSThread currentThread]);
-        }
+    if ( [keyPath isEqualToString:@"age"]) {
+        NSLog(@"%@",change);
     }
-    
 }
 
-- (void)startPolling
+-(void)printClassMethodNamesOfClass:(Class)cls{
+    unsigned int count;
+    Method *methodList = class_copyMethodList(cls, &count);
+    for (int i=0; i<count; i++) {
+        Method method = methodList[i];
+        NSString *methosName = NSStringFromSelector(method_getName(method));
+        NSLog(@"方法名：%@ \n",methosName);
+    }
+    free(methodList);
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    
+    self.person.age = 10;
 }
 
+- (void)testKVO{
+    self.person = [EOCCPPerson new];
+    self.person.age = 5;
+    //(Example0`-[EOCCPPerson setAge:] at EOCCPPerson.h:14)
+    NSLog(@"person添加监听之前---%p",[self.person methodForSelector:@selector(setAge:)]);
+    [self.person addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+    //(Foundation`_NSSetLongLongValueAndNotify)
+    NSLog(@"person添加监听之后---%p",[self.person methodForSelector:@selector(setAge:)]);
+    NSLog(@"%@",object_getClass(self.person));
+    
+    [self printClassMethodNamesOfClass:object_getClass(self.person)];
+}
+
+- (void)test{
+    
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(50, 250, 70, 70)];
+    btn.backgroundColor = [UIColor redColor];
+    [self.view addSubview:btn];
+    btn.tag = 1001;
+    //监听点击事件
+    
+    [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        NSLog(@"按钮点击了%@",x);
+    }];
+    
+    [[btn rac_valuesAndChangesForKeyPath:@"frame" options:(NSKeyValueObservingOptionNew) observer:self] subscribeNext:^(RACTwoTuple<id,NSDictionary *> * _Nullable x) {
+        NSLog(@"frame改变了%@",x.second);
+    }];
+    
+}
+static int countIndex = 0;
+- (void)textHello{
+    countIndex ++;
+    NSLog(@"==========%d",countIndex);
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib
-    
-    _timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(startPolling) userInfo:nil repeats:YES];
-    
-//    dispatch_queue_t queueA = dispatch_queue_create("queueA", NULL);
-//    dispatch_queue_t queueB = dispatch_queue_create("queueB", NULL);
+//    OrderItem *item0 = [OrderItem new];
+//    OrderItem *item1 = [OrderItem new];
+//    OrderItem *item2 = [OrderItem new];
+//    OrderItem *item3 = [OrderItem new];
+//    OrderItem *item4 = [OrderItem new];
+//    NSArray *orderItems = @[item0,item1,item2,item3,item4];
+//    NSNumber *totalPrices = [orderItems valueForKeyPath:@"@sum.price"];
+//    NSNumber *totalItems = [orderItems valueForKeyPath:@"@count"];
+//    NSArray *itemTypes = [orderItems valueForKeyPath:@"@distinctUnionOfObjects.desc"];
 //
-//    dispatch_set_target_queue(queueB, queueA);
-//    static int kQueueSpecific;
-//    CFStringRef queueSpecificValue = CFSTR("queueA");
-//    dispatch_queue_set_specific(queueA, &kQueueSpecific, (void *)queueSpecificValue, (dispatch_function_t)CFRelease);
 //
+//    Order *order = [Order new];
+//    NSNumber *items = [order valueForKeyPath:@"items.@count"];
+    
+//    for (int i=0; i<10; i++) {
+//        [self textHello];
+//    }
 //
-//    dispatch_sync(queueB, ^{
-//        dispatch_block_t block = ^{
-//            NSLog(@"No deadlock----%@",[NSThread currentThread]);
-//        };
-//        CFStringRef retrivedValue = dispatch_get_specific(&kQueueSpecific);
-//        if (retrivedValue) {
-//            block();
-//        }else
-//        {
-//            dispatch_sync(queueA, block);
-//        }
-//    });
-//
+    JSButton * agreeButton = [JSButton buttonWithType:UIButtonTypeCustom];
+    agreeButton.frame = CGRectMake((self.view.js_width-200)/2, 200, 200, 44);
+    agreeButton.backgroundColor = [UIColor lightGrayColor];
+    agreeButton.titleLabel.font = [UIFont systemFontOfSize:14.0f];
+    [agreeButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    [agreeButton setImage:[UIImage imageNamed:@"duoxuan"] forState:UIControlStateNormal];
+    [agreeButton setImage:[UIImage imageNamed:@"xuanzhong6"] forState:UIControlStateSelected];
+    [agreeButton setTitle:@"漆膜检测" forState:UIControlStateNormal];
+    [agreeButton setTitle:@"漆膜检测222" forState:UIControlStateSelected];
+    agreeButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [agreeButton addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:agreeButton];
+    agreeButton.selected = YES;
     
     
-    
-    /*
-     线程是代码执行的路径，队列则是用于保存以及管理任务的，线程负责去队列中取任务进行执行
-     */
-    //由于当前任务是在主队列中执行的，而serialQueue是新创建的queue，虽然h是同步执行，但并不是同一个queue，所以不会造成同步死锁
-    
-    //        if (dispatch_get_current_queue() == queue) {
-    //            NSLog(@"currentThread:%@------currentQueue:%@",[NSThread currentThread],dispatch_get_current_queue());
-    //        }else
-    //        {
-    //            NSLog(@"currentThread:%@------currentQueue:%@",[NSThread currentThread],dispatch_get_current_queue());
-    //        }
-    
-    //    });
-    
-    
-    //    dispatch_queue_t queueA = dispatch_queue_create("serialQueueA.com.cn", NULL);
-    //    dispatch_queue_t queueB = dispatch_queue_create("serialQueueB.com.cn", NULL);
-    //
-    //    dispatch_set_target_queue(queueB, queueA);
-    //
-    //    static int kQueueSpecific;
-    //    CFStringRef queueSpecificValue = CFSTR("queueA");
-    //    dispatch_queue_set_specific(queueA, &kQueueSpecific, (void *)queueSpecificValue, (dispatch_function_t)CFRelease);
-    //    dispatch_sync(queueB, ^{
-    //        dispatch_block_t block = ^{
-    //            NSLog(@"1111111111");
-    //        };
-    //        CFStringRef retrivedValue = dispatch_get_specific(&kQueueSpecific);
-    //        if (retrivedValue) {
-    //            NSLog(@"2222222");
-    //        }else
-    //        {
-    //            dispatch_sync(queueA, block);
-    //        }
-    //
-    //    });
-    //
-    
-    
-    
-    //    dispatch_sync(queueA, ^{
-    //        dispatch_sync(queueB, ^{
-    //            dispatch_block_t block = ^{
-    //                NSLog(@"222222222222");
-    //            };
-    //            if (dispatch_get_current_queue() == queueA) {
-    //                NSLog(@"11111111111");
-    //            }else
-    //            {
-    //                dispatch_sync(queueA, block);
-    //            }
-    //
-    //
-    //        });
-    //    });
-    
-    /*
-     
-     线程调度和操作队列
-     
-     
-     
-     通过[[NSOperationQueue alloc] init]这种方式得到的队列，它同时具备并发和串行的特征
-     maxConcurrentOperationCount,值为0，则不会执行，值为1，队列中所有的任务都会串行执行的，不过，串行执行并不等于只开一条线程，当值大于0时，那么队列就是并发队列了。
-     
-     */
-    //    dispatch_apply(10, dispatch_get_global_queue(0, 0), ^(size_t idx) {
-    //        NSLog(@"%zu------%@",idx,[NSThread currentThread]);
-    //    });
-    //
-    
-    
-    //    dispatch_group_t group = dispatch_group_create();
-    //    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
-    //    NSMutableArray *array = [NSMutableArray array];
-    //    [array addObject:@"hello"];
-    //    [array addObject:@"world"];
-    //
-    //    for (NSString *string in array) {
-    //        dispatch_group_enter(group);
-    //        dispatch_group_async(group, queue, ^{
-    //        NSLog(@"%@-----%@",string,[NSThread currentThread]);
-    //            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    //                dispatch_group_leave(group);
-    //            });
-    //        });
-    //    }
-    //
-    //    dispatch_async(queue, ^{
-    //        dispatch_group_wait(group, dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC));
-    //        NSLog(@"dispatch_group_wait 结束");
-    //    });
-    
-    //    dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
-    //    dispatch_group_notify(group, queue, ^{
-    //         NSLog(@"iiiiiiiiiiiiiiiiii");
-    //    });
-    //
-    //    NSLog(@"oooooooooooooooooooo");
-    
-    //    dispatch_group_notify(group, queue, ^{
-    //
-    //    });
-    
-    
-        UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, (self.view.js_width-100)/2, 44)];
-        btn.backgroundColor = [UIColor greenColor];
-        [btn setTitle:@"button" forState:UIControlStateNormal];
-        [btn addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
-        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [self.view addSubview:btn];
-    
-        UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(100, 100+50, (self.view.js_width-100)/2, 44)];
-        btn2.backgroundColor = [UIColor greenColor];
-        [btn2 setTitle:@"button2" forState:UIControlStateNormal];
-        [btn2 addTarget:self action:@selector(button2Clicked) forControlEvents:UIControlEventTouchUpInside];
-        [btn2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [self.view addSubview:btn2];
-    
-    
-    //    dispatch_get_current_queue();
-    
-    
-    
-    self.view.backgroundColor = [UIColor colorWithRed:0.98 green:0.98 blue:0.98 alpha:0.99];
     
     
 }
 
+- (void)btnSelected:(UIButton *)sender
+{
+    sender.selected = !sender.selected;
+    [self test];
+}
+
+
+/*
+ 1:51
+ 2:108
+ */
+- (void)testTagCollectionView
+{
+    
+    self.view.backgroundColor = [UIColor colorWithRed:0.98 green:0.98 blue:0.98 alpha:0.99];
+    TTGTextTagCollectionView *tagCollectionView = [[TTGTextTagCollectionView alloc] initWithFrame:CGRectMake(20, 100, self.view.js_width-40, 200)];
+    
+    tagCollectionView.delegate = self;
+    tagCollectionView.selectionLimit = 1;
+    tagCollectionView.defaultConfig.tagBackgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
+    tagCollectionView.defaultConfig.tagSelectedBackgroundColor = [UIColor colorWithRed:228/255.0 green:237/255.0 blue:255/255.0 alpha:1.0];
+    
+    tagCollectionView.defaultConfig.tagTextColor = [UIColor colorWithRed:26/255.0 green:26/255.0 blue:26/255.0 alpha:1/1.0];
+    tagCollectionView.defaultConfig.tagSelectedTextColor = [UIColor colorWithRed:83/255.0 green:142/255.0 blue:235/255.0 alpha:1/1.0];
+    
+    
+    tagCollectionView.defaultConfig.tagTextFont = [UIFont fontWithName:@"PingFangSC-Regular" size:12];
+    tagCollectionView.defaultConfig.tagExtraSpace = CGSizeMake(30, 30);
+    tagCollectionView.horizontalSpacing = 10;
+    
+    tagCollectionView.verticalSpacing = 10;
+    tagCollectionView.defaultConfig.tagShadowColor = [UIColor clearColor];
+    
+    tagCollectionView.defaultConfig.tagBorderColor = [UIColor colorWithRed:238/255.0 green:238/255.0 blue:238/255.0 alpha:1/1.0];
+    tagCollectionView.defaultConfig.tagSelectedBorderColor = [UIColor colorWithRed:160/255.0 green:191/255.0 blue:243/255.0 alpha:1.0];
+    
+    tagCollectionView.defaultConfig.tagShadowOffset = CGSizeMake(0, 0);
+    [self.view addSubview:tagCollectionView];
+    //    [tagCollectionView addTags:@[@"新款选择错误", @"需重新评级", @"补充信息", @"补充照片信息",@"评估检测信息不符"]];
+    [tagCollectionView addTags:@[@"新款选择错误", @"需重新评级", @"补充信息",@"新款选择错误", @"需重新评级", @"补充信息", @"补充照片信息",@"评估检测信息不符",@"新款选择错误", @"需重新评级", @"补充信息", @"补充照片信息",@"评估检测信息不符"]];
+    
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"%@",NSStringFromCGSize(tagCollectionView.contentSize));
+    });
+    
+}
+
+
+#pragma mark -TTGTextTagCollectionViewDelegate
+- (BOOL)textTagCollectionView:(TTGTextTagCollectionView *)textTagCollectionView
+                    canTapTag:(NSString *)tagText
+                      atIndex:(NSUInteger)index
+              currentSelected:(BOOL)currentSelected
+                    tagConfig:(TTGTextTagConfig *)config
+{
+    return YES;
+}
+
+- (void)textTagCollectionView:(TTGTextTagCollectionView *)textTagCollectionView
+                    didTapTag:(NSString *)tagText
+                      atIndex:(NSUInteger)index
+                     selected:(BOOL)selected
+                    tagConfig:(TTGTextTagConfig *)config
+{
+    self.currentIndex = index;
+    
+    NSLog(@"%d",index);
+}
+
+- (void)textTagCollectionView:(TTGTextTagCollectionView *)textTagCollectionView
+            updateContentSize:(CGSize)contentSize
+{
+    
+}
+
+
 - (void)buttonClicked
 {
-    EOCSecondViewController *vc = [[EOCSecondViewController alloc]init];
+    EOCSubViewController *vc = [[EOCSubViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

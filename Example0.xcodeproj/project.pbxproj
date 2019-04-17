@@ -17,6 +17,7 @@
 		9205013A21707CB500D87150 /* EOCEmployeeFinance.m in Sources */ = {isa = PBXBuildFile; fileRef = 9205013921707CB500D87150 /* EOCEmployeeFinance.m */; };
 		9205013D2170800A00D87150 /* Capture10.m in Sources */ = {isa = PBXBuildFile; fileRef = 9205013C2170800A00D87150 /* Capture10.m */; };
 		920501452170A66B00D87150 /* Capture11.m in Sources */ = {isa = PBXBuildFile; fileRef = 920501442170A66B00D87150 /* Capture11.m */; };
+		92067F5F21A25C01000B5B7A /* EOCCPPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 92067F5E21A25C01000B5B7A /* EOCCPPerson.m */; };
 		92068813216C9B73005EEF13 /* Lock.m in Sources */ = {isa = PBXBuildFile; fileRef = 92068812216C9B73005EEF13 /* Lock.m */; };
 		92071D292174320B00D374A3 /* Capture12.m in Sources */ = {isa = PBXBuildFile; fileRef = 92071D282174320B00D374A3 /* Capture12.m */; };
 		92071D3521743D4E00D374A3 /* EOCAutoDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 92071D3321743D4D00D374A3 /* EOCAutoDictionary.m */; };
@@ -56,6 +57,7 @@
 		92091D932179BB140089A070 /* Capture45.m in Sources */ = {isa = PBXBuildFile; fileRef = 92091D922179BB140089A070 /* Capture45.m */; };
 		92091D962179BC370089A070 /* Capture46.m in Sources */ = {isa = PBXBuildFile; fileRef = 92091D952179BC370089A070 /* Capture46.m */; };
 		92091D982179D34A0089A070 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92091D972179D34A0089A070 /* OpenGLES.framework */; };
+		9209ACCA219EC96F001B428D /* EOCDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 9209ACC9219EC96F001B428D /* EOCDog.m */; };
 		9209E1062175B0C5003CAD3C /* EOCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 9209E1052175B0C5003CAD3C /* EOCPerson.m */; };
 		9209E1092175B37F003CAD3C /* Capture19.m in Sources */ = {isa = PBXBuildFile; fileRef = 9209E1082175B37F003CAD3C /* Capture19.m */; };
 		9209E10C2175B7EB003CAD3C /* Capture20.m in Sources */ = {isa = PBXBuildFile; fileRef = 9209E10B2175B7EB003CAD3C /* Capture20.m */; };
@@ -83,10 +85,17 @@
 		920BEBFF216F1DC600DDE9F3 /* Capture4.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BEBFE216F1DC600DDE9F3 /* Capture4.m */; };
 		920BEC03216F463300DDE9F3 /* Capture5.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BEC02216F463300DDE9F3 /* Capture5.m */; };
 		920BEC07216F498300DDE9F3 /* Capture6.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BEC06216F498300DDE9F3 /* Capture6.m */; };
+		920CED9C226024D100A7A918 /* Coders.m in Sources */ = {isa = PBXBuildFile; fileRef = 920CED9B226024D100A7A918 /* Coders.m */; };
+		920CEDAB2260703F00A7A918 /* UIViewController+EOCDealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 920CEDAA2260703F00A7A918 /* UIViewController+EOCDealloc.m */; };
+		920CEDB222607E0900A7A918 /* EOCSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 920CEDB122607E0900A7A918 /* EOCSubViewController.m */; };
 		921913DB215F702F00508F46 /* GetUserInfoAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 921913DA215F702F00508F46 /* GetUserInfoAPI.m */; };
 		921913DE215F720000508F46 /* GetImageAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 921913DD215F720000508F46 /* GetImageAPI.m */; };
 		921913E4215F746900508F46 /* YTKUrlArgumentsFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 921913E2215F746900508F46 /* YTKUrlArgumentsFilter.m */; };
 		921913F3215F7EBC00508F46 /* UploadImageAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 921913F1215F7EBC00508F46 /* UploadImageAPI.m */; };
+		9249E33F225F31B700CFEE58 /* EOCHello.m in Sources */ = {isa = PBXBuildFile; fileRef = 9249E33E225F31B700CFEE58 /* EOCHello.m */; };
+		9249E345225F3BF600CFEE58 /* OrderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9249E344225F3BF600CFEE58 /* OrderItem.m */; };
+		9249E348225F435D00CFEE58 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 9249E347225F435D00CFEE58 /* Person.m */; };
+		9249E34E225F477700CFEE58 /* Coder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9249E34D225F477700CFEE58 /* Coder.m */; };
 		928E2279218171B100F24D45 /* NSTimer+EOCBlockSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 928E2278218171B100F24D45 /* NSTimer+EOCBlockSupport.m */; };
 		928E227F21818B9500F24D45 /* EOCSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928E227E21818B9400F24D45 /* EOCSecondViewController.m */; };
 		929C37BD21806D7900C0F883 /* Capture47.m in Sources */ = {isa = PBXBuildFile; fileRef = 929C37BC21806D7900C0F883 /* Capture47.m */; };
@@ -99,6 +108,18 @@
 		92BCAEBA2146600000D30B1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BCAEB92146600000D30B1E /* main.m */; };
 		F424D7FF07E8D80142BB672D /* libPods-Example0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A68E308E7EB673EEBE605B /* libPods-Example0.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		920464EC219BC3F200BFA404 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = image.png;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# copypng\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
 		4F081EBC2C569B620A0F30E9 /* Pods-Example0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example0/Pods-Example0.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +144,8 @@
 		9205013C2170800A00D87150 /* Capture10.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Capture10.m; sourceTree = "<group>"; };
 		920501432170A66B00D87150 /* Capture11.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture11.h; sourceTree = "<group>"; };
 		920501442170A66B00D87150 /* Capture11.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Capture11.m; sourceTree = "<group>"; };
+		92067F5D21A25C01000B5B7A /* EOCCPPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCCPPerson.h; sourceTree = "<group>"; };
+		92067F5E21A25C01000B5B7A /* EOCCPPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCCPPerson.m; sourceTree = "<group>"; };
 		92068811216C9B73005EEF13 /* Lock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lock.h; sourceTree = "<group>"; };
 		92068812216C9B73005EEF13 /* Lock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lock.m; sourceTree = "<group>"; };
 		92071D272174320B00D374A3 /* Capture12.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture12.h; sourceTree = "<group>"; };
@@ -201,6 +224,8 @@
 		92091D942179BC370089A070 /* Capture46.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture46.h; sourceTree = "<group>"; };
 		92091D952179BC370089A070 /* Capture46.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Capture46.m; sourceTree = "<group>"; };
 		92091D972179D34A0089A070 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		9209ACC8219EC96F001B428D /* EOCDog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCDog.h; sourceTree = "<group>"; };
+		9209ACC9219EC96F001B428D /* EOCDog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCDog.m; sourceTree = "<group>"; };
 		9209E1042175B0C5003CAD3C /* EOCPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EOCPerson.h; sourceTree = "<group>"; };
 		9209E1052175B0C5003CAD3C /* EOCPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EOCPerson.m; sourceTree = "<group>"; };
 		9209E1072175B37F003CAD3C /* Capture19.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture19.h; sourceTree = "<group>"; };
@@ -255,6 +280,13 @@
 		920BEC02216F463300DDE9F3 /* Capture5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Capture5.m; sourceTree = "<group>"; };
 		920BEC05216F498300DDE9F3 /* Capture6.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture6.h; sourceTree = "<group>"; };
 		920BEC06216F498300DDE9F3 /* Capture6.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Capture6.m; sourceTree = "<group>"; };
+		920CAE38225EE03F00B7229B /* static关键字.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "static关键字.md"; sourceTree = "<group>"; };
+		920CED9A226024D100A7A918 /* Coders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Coders.h; sourceTree = "<group>"; };
+		920CED9B226024D100A7A918 /* Coders.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Coders.m; sourceTree = "<group>"; };
+		920CEDA92260703F00A7A918 /* UIViewController+EOCDealloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EOCDealloc.h"; sourceTree = "<group>"; };
+		920CEDAA2260703F00A7A918 /* UIViewController+EOCDealloc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EOCDealloc.m"; sourceTree = "<group>"; };
+		920CEDB022607E0900A7A918 /* EOCSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EOCSubViewController.h; sourceTree = "<group>"; };
+		920CEDB122607E0900A7A918 /* EOCSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EOCSubViewController.m; sourceTree = "<group>"; };
 		921913D9215F702F00508F46 /* GetUserInfoAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfoAPI.h; sourceTree = "<group>"; };
 		921913DA215F702F00508F46 /* GetUserInfoAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfoAPI.m; sourceTree = "<group>"; };
 		921913DC215F720000508F46 /* GetImageAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetImageAPI.h; sourceTree = "<group>"; };
@@ -263,6 +295,14 @@
 		921913E3215F746900508F46 /* YTKUrlArgumentsFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKUrlArgumentsFilter.h; sourceTree = "<group>"; };
 		921913F1215F7EBC00508F46 /* UploadImageAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadImageAPI.m; sourceTree = "<group>"; };
 		921913F2215F7EBC00508F46 /* UploadImageAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadImageAPI.h; sourceTree = "<group>"; };
+		9249E33D225F31B700CFEE58 /* EOCHello.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EOCHello.h; sourceTree = "<group>"; };
+		9249E33E225F31B700CFEE58 /* EOCHello.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EOCHello.m; sourceTree = "<group>"; };
+		9249E343225F3BF500CFEE58 /* OrderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderItem.h; sourceTree = "<group>"; };
+		9249E344225F3BF600CFEE58 /* OrderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderItem.m; sourceTree = "<group>"; };
+		9249E346225F435D00CFEE58 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		9249E347225F435D00CFEE58 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		9249E34C225F477700CFEE58 /* Coder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coder.h; sourceTree = "<group>"; };
+		9249E34D225F477700CFEE58 /* Coder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coder.m; sourceTree = "<group>"; };
 		928E2277218171B100F24D45 /* NSTimer+EOCBlockSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+EOCBlockSupport.h"; sourceTree = "<group>"; };
 		928E2278218171B100F24D45 /* NSTimer+EOCBlockSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+EOCBlockSupport.m"; sourceTree = "<group>"; };
 		928E227D21818B9400F24D45 /* EOCSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCSecondViewController.h; sourceTree = "<group>"; };
@@ -327,6 +367,54 @@
 			path = Test;
 			sourceTree = "<group>";
 		};
+		920616212182ADEE004ED60D /* EffectiveOC */ = {
+			isa = PBXGroup;
+			children = (
+				920616222182AE27004ED60D /* Knowledge */,
+				920616232182AE4F004ED60D /* Demo */,
+			);
+			path = EffectiveOC;
+			sourceTree = "<group>";
+		};
+		920616222182AE27004ED60D /* Knowledge */ = {
+			isa = PBXGroup;
+			children = (
+				9209B36D216DA2FE00B8042D /* 精通Objective-C */,
+				920BEC04216F496E00DDE9F3 /* 对象，消息，运行期 */,
+				92071D5121747B5300D374A3 /* 接口与API设计 */,
+				9209E1132175C354003CAD3C /* 协议与分类 */,
+				9208FFA62177122200F20752 /* 内存管理 */,
+				920AB0C12178655A00FD304B /* 块与大中枢派发 */,
+				929C37BA21806D6100C0F883 /* 系统框架 */,
+			);
+			path = Knowledge;
+			sourceTree = "<group>";
+		};
+		920616232182AE4F004ED60D /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				9205013E2170804A00D87150 /* Test */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		920616242182AE77004ED60D /* YTKRequestDemo */ = {
+			isa = PBXGroup;
+			children = (
+				921913F2215F7EBC00508F46 /* UploadImageAPI.h */,
+				921913F1215F7EBC00508F46 /* UploadImageAPI.m */,
+				921913E3215F746900508F46 /* YTKUrlArgumentsFilter.h */,
+				921913E2215F746900508F46 /* YTKUrlArgumentsFilter.m */,
+				921913DC215F720000508F46 /* GetImageAPI.h */,
+				921913DD215F720000508F46 /* GetImageAPI.m */,
+				921913D9215F702F00508F46 /* GetUserInfoAPI.h */,
+				921913DA215F702F00508F46 /* GetUserInfoAPI.m */,
+				920500A4215F6C4700C3A8B2 /* RegisterAPI.h */,
+				920500A5215F6C4700C3A8B2 /* RegisterAPI.m */,
+			);
+			path = YTKRequestDemo;
+			sourceTree = "<group>";
+		};
 		92071D4821747A0F00D374A3 /* 12 */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,7 +448,7 @@
 			path = 14;
 			sourceTree = "<group>";
 		};
-		92071D5121747B5300D374A3 /* Section3 */ = {
+		92071D5121747B5300D374A3 /* 接口与API设计 */ = {
 			isa = PBXGroup;
 			children = (
 				92071D5521747C5E00D374A3 /* Capture15.h */,
@@ -380,7 +468,7 @@
 				9209E1102175BEEA003CAD3C /* Capture22.h */,
 				9209E1112175BEEA003CAD3C /* Capture22.m */,
 			);
-			path = Section3;
+			path = "接口与API设计";
 			sourceTree = "<group>";
 		};
 		92071D612174825700D374A3 /* 15 */ = {
@@ -446,7 +534,7 @@
 			path = 28;
 			sourceTree = "<group>";
 		};
-		9208FFA62177122200F20752 /* Section5 */ = {
+		9208FFA62177122200F20752 /* 内存管理 */ = {
 			isa = PBXGroup;
 			children = (
 				9208FF9721770C1000F20752 /* Capture29.h */,
@@ -466,7 +554,7 @@
 				920AB0BE21785FC700FD304B /* Capture36.h */,
 				920AB0BF21785FC700FD304B /* Capture36.m */,
 			);
-			path = Section5;
+			path = "内存管理";
 			sourceTree = "<group>";
 		};
 		9208FFB321772AC600F20752 /* 31 */ = {
@@ -487,7 +575,7 @@
 			path = 33;
 			sourceTree = "<group>";
 		};
-		9209B36D216DA2FE00B8042D /* Section1 */ = {
+		9209B36D216DA2FE00B8042D /* 精通Objective-C */ = {
 			isa = PBXGroup;
 			children = (
 				920BEBEA216EE71400DDE9F3 /* Capture1.h */,
@@ -501,10 +589,10 @@
 				920BEC01216F463300DDE9F3 /* Capture5.h */,
 				920BEC02216F463300DDE9F3 /* Capture5.m */,
 			);
-			path = Section1;
+			path = "精通Objective-C";
 			sourceTree = "<group>";
 		};
-		9209E1132175C354003CAD3C /* Section4 */ = {
+		9209E1132175C354003CAD3C /* 协议与分类 */ = {
 			isa = PBXGroup;
 			children = (
 				9209E1142175C367003CAD3C /* Capture23.h */,
@@ -520,10 +608,10 @@
 				9208FF9A21770C2700F20752 /* Capture28.h */,
 				9208FF9B21770C2700F20752 /* Capture28.m */,
 			);
-			path = Section4;
+			path = "协议与分类";
 			sourceTree = "<group>";
 		};
-		920AB0C12178655A00FD304B /* Section6 */ = {
+		920AB0C12178655A00FD304B /* 块与大中枢派发 */ = {
 			isa = PBXGroup;
 			children = (
 				920AB0C22178656E00FD304B /* Capture37.h */,
@@ -547,7 +635,7 @@
 				92091D942179BC370089A070 /* Capture46.h */,
 				92091D952179BC370089A070 /* Capture46.m */,
 			);
-			path = Section6;
+			path = "块与大中枢派发";
 			sourceTree = "<group>";
 		};
 		920AB0C5217865A300FD304B /* 36 */ = {
@@ -568,7 +656,7 @@
 			path = 37;
 			sourceTree = "<group>";
 		};
-		920BEC04216F496E00DDE9F3 /* Section2 */ = {
+		920BEC04216F496E00DDE9F3 /* 对象，消息，运行期 */ = {
 			isa = PBXGroup;
 			children = (
 				920BEC05216F498300DDE9F3 /* Capture6.h */,
@@ -590,7 +678,44 @@
 				92071D392174627E00D374A3 /* Capture14.h */,
 				92071D3A2174627E00D374A3 /* Capture14.m */,
 			);
-			path = Section2;
+			path = "对象，消息，运行期";
+			sourceTree = "<group>";
+		};
+		920CAE37225EE01F00B7229B /* 问题和答案集合 */ = {
+			isa = PBXGroup;
+			children = (
+				9249E33C225F317B00CFEE58 /* 键值编码 */,
+				920CAE38225EE03F00B7229B /* static关键字.md */,
+			);
+			path = "问题和答案集合";
+			sourceTree = "<group>";
+		};
+		9249E33C225F317B00CFEE58 /* 键值编码 */ = {
+			isa = PBXGroup;
+			children = (
+				9249E34C225F477700CFEE58 /* Coder.h */,
+				9249E34D225F477700CFEE58 /* Coder.m */,
+				9249E343225F3BF500CFEE58 /* OrderItem.h */,
+				9249E344225F3BF600CFEE58 /* OrderItem.m */,
+				9249E33D225F31B700CFEE58 /* EOCHello.h */,
+				9249E33E225F31B700CFEE58 /* EOCHello.m */,
+				9249E346225F435D00CFEE58 /* Person.h */,
+				9249E347225F435D00CFEE58 /* Person.m */,
+				920CED9A226024D100A7A918 /* Coders.h */,
+				920CED9B226024D100A7A918 /* Coders.m */,
+			);
+			path = "键值编码";
+			sourceTree = "<group>";
+		};
+		92873A702189811F00448DEF /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				92067F5D21A25C01000B5B7A /* EOCCPPerson.h */,
+				92067F5E21A25C01000B5B7A /* EOCCPPerson.m */,
+				9209ACC8219EC96F001B428D /* EOCDog.h */,
+				9209ACC9219EC96F001B428D /* EOCDog.m */,
+			);
+			path = Demo;
 			sourceTree = "<group>";
 		};
 		928E22762181719600F24D45 /* 52 */ = {
@@ -602,7 +727,7 @@
 			path = 52;
 			sourceTree = "<group>";
 		};
-		929C37BA21806D6100C0F883 /* Section7 */ = {
+		929C37BA21806D6100C0F883 /* 系统框架 */ = {
 			isa = PBXGroup;
 			children = (
 				929C37BB21806D7900C0F883 /* Capture47.h */,
@@ -618,7 +743,7 @@
 				920B450D21816D3F00A2FF8D /* Capture52.h */,
 				920B450E21816D3F00A2FF8D /* Capture52.m */,
 			);
-			path = Section7;
+			path = "系统框架";
 			sourceTree = "<group>";
 		};
 		92BCAE9E21465FFF00D30B1E = {
@@ -642,32 +767,20 @@
 		92BCAEA921465FFF00D30B1E /* Example0 */ = {
 			isa = PBXGroup;
 			children = (
+				920CEDA92260703F00A7A918 /* UIViewController+EOCDealloc.h */,
+				920CEDAA2260703F00A7A918 /* UIViewController+EOCDealloc.m */,
+				920CAE37225EE01F00B7229B /* 问题和答案集合 */,
+				92873A702189811F00448DEF /* Demo */,
+				920616242182AE77004ED60D /* YTKRequestDemo */,
+				920616212182ADEE004ED60D /* EffectiveOC */,
 				928E227D21818B9400F24D45 /* EOCSecondViewController.h */,
 				928E227E21818B9400F24D45 /* EOCSecondViewController.m */,
-				929C37BA21806D6100C0F883 /* Section7 */,
 				92A96F9C217EF0560048B285 /* SwiftInstruction.h */,
 				92A96F9D217EF0560048B285 /* SwiftInstruction.m */,
 				920B44FE21815C2300A2FF8D /* JSQuestionAndAnswer.h */,
 				920B44FF21815C2300A2FF8D /* JSQuestionAndAnswer.m */,
-				920AB0C12178655A00FD304B /* Section6 */,
 				9208FFAA2177148000F20752 /* EOCNoARC.h */,
 				9208FFAB2177148000F20752 /* EOCNoARC.m */,
-				9208FFA62177122200F20752 /* Section5 */,
-				9209E1132175C354003CAD3C /* Section4 */,
-				92071D5121747B5300D374A3 /* Section3 */,
-				9205013E2170804A00D87150 /* Test */,
-				920BEC04216F496E00DDE9F3 /* Section2 */,
-				9209B36D216DA2FE00B8042D /* Section1 */,
-				921913F2215F7EBC00508F46 /* UploadImageAPI.h */,
-				921913F1215F7EBC00508F46 /* UploadImageAPI.m */,
-				921913E3215F746900508F46 /* YTKUrlArgumentsFilter.h */,
-				921913E2215F746900508F46 /* YTKUrlArgumentsFilter.m */,
-				921913DC215F720000508F46 /* GetImageAPI.h */,
-				921913DD215F720000508F46 /* GetImageAPI.m */,
-				921913D9215F702F00508F46 /* GetUserInfoAPI.h */,
-				921913DA215F702F00508F46 /* GetUserInfoAPI.m */,
-				920500A4215F6C4700C3A8B2 /* RegisterAPI.h */,
-				920500A5215F6C4700C3A8B2 /* RegisterAPI.m */,
 				92BCAEAA21465FFF00D30B1E /* AppDelegate.h */,
 				92BCAEAB21465FFF00D30B1E /* AppDelegate.m */,
 				92BCAEAD21465FFF00D30B1E /* ViewController.h */,
@@ -679,6 +792,8 @@
 				92BCAEB92146600000D30B1E /* main.m */,
 				92068811216C9B73005EEF13 /* Lock.h */,
 				92068812216C9B73005EEF13 /* Lock.m */,
+				920CEDB022607E0900A7A918 /* EOCSubViewController.h */,
+				920CEDB122607E0900A7A918 /* EOCSubViewController.m */,
 			);
 			path = Example0;
 			sourceTree = "<group>";
@@ -706,6 +821,7 @@
 				A238EA279371472EC3702FA3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
+				920464EC219BC3F200BFA404 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -726,6 +842,7 @@
 				TargetAttributes = {
 					92BCAEA621465FFF00D30B1E = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -786,14 +903,18 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Example0/Pods-Example0-resources.sh",
+				"${PODS_ROOT}/CYPExtension/CYPExtension/CYPRefresh/Refresh.bundle",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/JSPatch/JSPatch/JSPatch.js",
 				"${PODS_CONFIGURATION_BUILD_DIR}/JSPhotoBrowser/JSPhotoBrowser.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/MyLibrary/MyLibrary.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Refresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JSPatch.js",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JSPhotoBrowser.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MyLibrary.bundle",
@@ -819,6 +940,7 @@
 				9209E10F2175BAEA003CAD3C /* Capture21.m in Sources */,
 				9209E10C2175B7EB003CAD3C /* Capture20.m in Sources */,
 				9208FF8D2176E00200F20752 /* NSString+HTTP.m in Sources */,
+				9249E348225F435D00CFEE58 /* Person.m in Sources */,
 				920B450021815C2300A2FF8D /* JSQuestionAndAnswer.m in Sources */,
 				92091D8D21797D820089A070 /* Capture43.m in Sources */,
 				9208FF902176E08700F20752 /* NSString+EOCURL.m in Sources */,
@@ -828,6 +950,7 @@
 				92BCAEAF21465FFF00D30B1E /* ViewController.m in Sources */,
 				9205013D2170800A00D87150 /* Capture10.m in Sources */,
 				9208FFBC2177359E00F20752 /* Capture33.m in Sources */,
+				920CEDAB2260703F00A7A918 /* UIViewController+EOCDealloc.m in Sources */,
 				9208FF892176DC5900F20752 /* Capture25.m in Sources */,
 				9208FFAF21771F8D00F20752 /* Capture30.m in Sources */,
 				9205013721707CA700D87150 /* EOCEmployeeDesigner.m in Sources */,
@@ -849,6 +972,7 @@
 				92071D3821745E6600D374A3 /* Capture13.m in Sources */,
 				920AB0D82178873100FD304B /* Capture41.m in Sources */,
 				92071D60217481EA00D374A3 /* Capture16.m in Sources */,
+				9249E345225F3BF600CFEE58 /* OrderItem.m in Sources */,
 				92BCAEAC21465FFF00D30B1E /* AppDelegate.m in Sources */,
 				920501452170A66B00D87150 /* Capture11.m in Sources */,
 				92071D6A217486BA00D374A3 /* Capture17.m in Sources */,
@@ -866,14 +990,19 @@
 				92091D962179BC370089A070 /* Capture46.m in Sources */,
 				92071D672174839500D374A3 /* EOCSquare.m in Sources */,
 				921913F3215F7EBC00508F46 /* UploadImageAPI.m in Sources */,
+				920CED9C226024D100A7A918 /* Coders.m in Sources */,
 				920B450321815D4500A2FF8D /* Capture48.m in Sources */,
 				92071D5A21747DB700D374A3 /* EOCSoundPlayer.m in Sources */,
 				920B450F21816D3F00A2FF8D /* Capture52.m in Sources */,
 				92091D932179BB140089A070 /* Capture45.m in Sources */,
 				9208FF932176E2F600F20752 /* Capture26.m in Sources */,
+				9249E33F225F31B700CFEE58 /* EOCHello.m in Sources */,
 				920AB0C8217865B600FD304B /* EOCRetainCount.m in Sources */,
 				9208FF832176D38200F20752 /* EOCNetworkFetcher.m in Sources */,
 				9205013A21707CB500D87150 /* EOCEmployeeFinance.m in Sources */,
+				9249E34E225F477700CFEE58 /* Coder.m in Sources */,
+				9209ACCA219EC96F001B428D /* EOCDog.m in Sources */,
+				92067F5F21A25C01000B5B7A /* EOCCPPerson.m in Sources */,
 				921913E4215F746900508F46 /* YTKUrlArgumentsFilter.m in Sources */,
 				928E2279218171B100F24D45 /* NSTimer+EOCBlockSupport.m in Sources */,
 				9208FFB621772ADB00F20752 /* EOCServerConnection.m in Sources */,
@@ -889,6 +1018,7 @@
 				9208FFA52177102100F20752 /* EOCDatabaseManager.m in Sources */,
 				9208FF9C21770C2700F20752 /* Capture28.m in Sources */,
 				9208FF962176FEB300F20752 /* Capture27.m in Sources */,
+				920CEDB222607E0900A7A918 /* EOCSubViewController.m in Sources */,
 				920AB0B6217823F300FD304B /* Capture35.m in Sources */,
 				920BEC03216F463300DDE9F3 /* Capture5.m in Sources */,
 				9205013421707C8F00D87150 /* EOCEmployeeDeveloper.m in Sources */,
@@ -1038,6 +1168,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3HN45NE646;
 				INFOPLIST_FILE = Example0/Info.plist;
@@ -1048,6 +1179,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cheyipai.mgms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Example0/Demo/Example0-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1059,6 +1193,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3HN45NE646;
 				INFOPLIST_FILE = Example0/Info.plist;
@@ -1069,6 +1204,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cheyipai.mgms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Example0/Demo/Example0-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

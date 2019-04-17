@@ -1,0 +1,1 @@
+../../../CYPExtension/CYPExtension/SingleR/SingleR/SignalR.Client/SRConnection.h

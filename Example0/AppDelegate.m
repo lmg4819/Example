@@ -17,7 +17,7 @@
 #import "GetUserInfoAPI.h"
 #import "NSString+EOCURL.h"
 #import "NSString+HTTP.h"
-
+#import "EOCDog.h"
 
 #if defined(DEBUG)||defined(_DEBUG)
 #import <JPFPSStatus.h>
@@ -35,49 +35,17 @@
     if ([userActivity.activityType isEqualToString:@"loying.LearnSiriShortcut.type"]) {
         // 做自己的业务逻辑
     }
-    /*
-     1 5 7
-     [100,1000]
-     */
     
-//    int x,y,z,m;
-//    x + 5*y + 7*z = m;
-//    m >= 100 && m <= 1000;
-    
-//    x+y+z的最小值
-   /*
-   0<= z <= 142
-   0<= y <= 200
-   0<= x <= 1000
-    */
-    
-    
+   
+
+   
     
     return YES;
 }
 
-void function(){
-    NSMutableArray *array = [NSMutableArray array];
-    for (int i=0; i<1000; i++) {
-        for (int j=0; j<200; j++) {
-            for (int k=0; k<142; k++) {
-                if ((i+5*j+7*k >= 100) && (i+5*j+7*k <= 1000)) {
-
-                    if (i+j+k == 15) {
-                        NSLog(@"i:%d,j:%d,k:%d,count:%d",i,j,k,i+j+k);
-                    }
-                    [array addObject:@(i+j+k)];
-                }
-            }
-        }
-    }
-//    NSLog(@"%@",array);
-    
-}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    function();
     NSUserActivity *userActivity = [[NSUserActivity alloc] initWithActivityType:@"loying.LearnSiriShortcut.type"];
     if (@available(iOS 12.0, *)) // 如果要支持老版本，加上判断
     {
@@ -87,15 +55,30 @@ void function(){
     userActivity.userInfo = @{@"testKey" : @"testValue"};
     self.userActivity = userActivity;
     
-
+    
+//    dispatch_queue_t queue = dispatch_queue_create(0, NULL);
+//
+//    dispatch_apply(10, queue, ^(size_t i) {
+//        NSLog(@"%@------%zu",[NSThread currentThread],i);
+//    });
+    
+    
+//    EOCDog *dog = [EOCDog new];
+//    [dog setValue:@"23456" forKey:@"name"];
+//    NSString* name = [dog valueForKey:@"name"];
+//    NSLog(@"------%@------",name);
+//
+//
+//    [dog setValue:nil forKey:@"hello"];
+//
+//
+//    [dog setValue:nil forKey:@"count"];
+//    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+//    NSLog(@"%f",width);
     @autoreleasepool {
         
     }
     self.isIphonex = isIPhoneXSeries();
-
-    
-    NSString *temp =  [@"111" urlEncodedString];
-    NSString *temp1 =  [@"222" urlDecodedString];
     
 #if defined(DEBUG)||defined(_DEBUG)
     [[JPFPSStatus sharedInstance] open];
@@ -103,8 +86,6 @@ void function(){
     
     return YES;
 }
-
-
 
 - (void)sendChainRequest
 {

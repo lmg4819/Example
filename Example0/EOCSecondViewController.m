@@ -10,9 +10,6 @@
 #import "NSTimer+EOCBlockSupport.h"
 
 @interface EOCSecondViewController ()
-{
-    NSTimer *_timer;
-}
 @end
 
 @implementation EOCSecondViewController
@@ -21,15 +18,29 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-   _timer =  [NSTimer eoc_scheduleTimerWithTimeInterval:2.0 block:^{
-        NSLog(@"11111111111111");
-    } repeats:YES];
+    
+    for (int i=0; i<10; i++) {
+        [self calculator];
+    }
+}
+int countIndex = 0;
+- (void)calculator
+{
+//    static int index = 0;
+    countIndex ++ ;
+//    NSLog(@"------%d-----",countIndex);
 }
 
--(void)dealloc
+-(void)viewWillAppear:(BOOL)animated
 {
-    [_timer invalidate];
-    NSLog(@"22222222222222");
+    [super viewWillAppear:animated];
+    NSLog(@"111111111111111");
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    NSLog(@"222222222222222");
 }
 
 @end
