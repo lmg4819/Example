@@ -124,8 +124,6 @@
 /* Begin PBXFileReference section */
 		4F081EBC2C569B620A0F30E9 /* Pods-Example0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example0/Pods-Example0.debug.xcconfig"; sourceTree = "<group>"; };
 		55A68E308E7EB673EEBE605B /* libPods-Example0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		58F73B0B226749F100B9F471 /* 面试题回顾.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "面试题回顾.h"; sourceTree = "<group>"; };
-		58F73B0C2267829A00B9F471 /* 面试题总结.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "面试题总结.h"; sourceTree = "<group>"; };
 		920500A4215F6C4700C3A8B2 /* RegisterAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterAPI.h; sourceTree = "<group>"; };
 		920500A5215F6C4700C3A8B2 /* RegisterAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterAPI.m; sourceTree = "<group>"; };
 		920501182170420700D87150 /* Capture7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture7.h; sourceTree = "<group>"; };
@@ -290,6 +288,7 @@
 		920CEDAA2260703F00A7A918 /* UIViewController+EOCDealloc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EOCDealloc.m"; sourceTree = "<group>"; };
 		920CEDB022607E0900A7A918 /* EOCSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EOCSubViewController.h; sourceTree = "<group>"; };
 		920CEDB122607E0900A7A918 /* EOCSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EOCSubViewController.m; sourceTree = "<group>"; };
+		921102F722680A8600B76536 /* 面试题总结.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "面试题总结.h"; sourceTree = "<group>"; };
 		921913D9215F702F00508F46 /* GetUserInfoAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfoAPI.h; sourceTree = "<group>"; };
 		921913DA215F702F00508F46 /* GetUserInfoAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfoAPI.m; sourceTree = "<group>"; };
 		921913DC215F720000508F46 /* GetImageAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetImageAPI.h; sourceTree = "<group>"; };
@@ -771,6 +770,7 @@
 		92BCAEA921465FFF00D30B1E /* Example0 */ = {
 			isa = PBXGroup;
 			children = (
+				921102F722680A8600B76536 /* 面试题总结.h */,
 				923B7A6422672F950049C930 /* JSObject.h */,
 				920C9DE02266B72200E9EC7F /* 面试题回顾.h */,
 				920CEDA92260703F00A7A918 /* UIViewController+EOCDealloc.h */,
@@ -909,7 +909,6 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Example0/Pods-Example0-resources.sh",
-				"${PODS_ROOT}/CYPExtension/CYPExtension/CYPRefresh/Refresh.bundle",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/JSPatch/JSPatch/JSPatch.js",
 				"${PODS_CONFIGURATION_BUILD_DIR}/JSPhotoBrowser/JSPhotoBrowser.bundle",
@@ -918,7 +917,6 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Refresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JSPatch.js",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JSPhotoBrowser.bundle",

@@ -1,1 +1,0 @@
-../../../HTTPManager/HTTPManager/CYPRequestConfigProtocol.h

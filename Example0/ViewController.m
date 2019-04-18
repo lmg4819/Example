@@ -134,25 +134,25 @@ static int countIndex = 0;
     
 //    dispatch_queue_t queue = dispatch_get_main_queue();
 
-    dispatch_async(queue, ^{
-        NSLog(@"11111------%@",[NSThread currentThread]);
-    });
-    
-    dispatch_async(queue, ^{
-        NSLog(@"22222------%@",[NSThread currentThread]);
-    });
-    
-    dispatch_async(queue, ^{
-        NSLog(@"33333------%@",[NSThread currentThread]);
-    });
-    
-    dispatch_async(queue, ^{
-        NSLog(@"44444------%@",[NSThread currentThread]);
-    });
-    
-    dispatch_async(queue, ^{
-        NSLog(@"55555------%@",[NSThread currentThread]);
-    });
+//    dispatch_async(queue, ^{
+//        NSLog(@"11111------%@",[NSThread currentThread]);
+//    });
+//    
+//    dispatch_async(queue, ^{
+//        NSLog(@"22222------%@",[NSThread currentThread]);
+//    });
+//    
+//    dispatch_async(queue, ^{
+//        NSLog(@"33333------%@",[NSThread currentThread]);
+//    });
+//    
+//    dispatch_async(queue, ^{
+//        NSLog(@"44444------%@",[NSThread currentThread]);
+//    });
+//    
+//    dispatch_async(queue, ^{
+//        NSLog(@"55555------%@",[NSThread currentThread]);
+//    });
     
     // Do any additional setup after loading the view, typically from a nib
 //    OrderItem *item0 = [OrderItem new];

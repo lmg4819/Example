@@ -16,6 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 NS_ASSUME_NONNULL_END
 /*
+
+Runtime实现的机制是什么，怎么用，一般用于干嘛？
+ 
+ 1.实际上我们编写d的
+
  
  
  */

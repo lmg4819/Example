@@ -1,1 +1,0 @@
-../../../CYPExtension/CYPExtension/SingleR/SingleR/SignalR.Client/Transports/SRClientTransportInterface.h

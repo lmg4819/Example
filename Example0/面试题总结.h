@@ -277,7 +277,8 @@ NSThread,GCD,NSOperationQueue,pthread
 
 
 57.什么是 TCP / UDP ?
-
+TCP  是         不可靠      传输大量的数据，对可靠性要求高的场合    慢
+UDP  否         可靠        传输少量的数据，对可靠性要求不高的场景  块
 
 58.通信底层原理（OSI七层模型）
 物理层，数据链路层，网络层，传输层，会话层，表示层，应用层
@@ -305,7 +306,10 @@ tap和swipe
 
 
 64.HTTP协议中 POST 方法和 GET 方法有那些区别?
-
+1.get是用于向服务器请求数据，post用于提交数据
+2.get请求，请求参数拼接在形式暴露在地址栏，而POST请求参数则放在请求体里面，
+因此get请求不适合传重要数据
+3.get请求的URL有长度限制，POST无长度限制
 
 65.请简单的介绍下APNS发送系统消息的机制
 
@@ -342,36 +346,71 @@ UI框架的底层有CoreAnimation，CoreAnimation的底层有CoreGraphics。
 CoreText可以解决复杂文字内容排版问题。CoreImage可以处理图片，为其添加各种效果
 
 72.自动释放池是什么,如何工作
-
+当你想一个对象发送autorelease消息，这个对象会被放入到当前的AutoreleasePool，它仍然是个OC对象，因此自动释放池作用域内的对象仍然可以向它发送消息，当程序执行到作用域结束的位置，自动释放池会被释放，池中的所有对象都会被发送一次releasse消息
 
 
 73.你用过NSOperationQueue么？如果用过或者了解的话，你为什么要使用NSOperationQueue，
 实现了什么？请描述它和G.C.D的区别和类似的地方（提示：可以从两者的实现机制和适用范围来描述）。
 
 
-74。对于Objective-C，你认为它最大的优点和最大的不足是什么？对于不足之处，现在有没有可用的方法绕过这些不足来实现需求。
-如果可以的话，你有没有考虑或者实践过重新实现OC的一些功能，如果有，具体会如何做？
+74。对于Objective-C，你认为它最大的优点和最大的不足是什么？对于不足之处，现在有没有可用的方法绕过这些不足来实现需求。如果可以的话，你有没有考虑或者实践过重新实现OC的一些功能，如果有，具体会如何做？
 
 75。你实现过一个框架或者库以供别人使用么？如果有，请谈一谈构建框架或者库时候的经验；如果没有，请设想和设计框架的public的API，并指出大概需要如何做、需要注意一些什么方面，来使别人容易地使用你的框架。
-
+1.抽象和封装，方便使用，
+2，提供尽可能少的接口，提供详尽的开发文档和使用说明
+3，把外放的属性设置为只读模式，提供方法对需要修改的属性进行操作
+4，对于可能被异步调用的方法要加锁
 
 76.AFNetworking 底层原理分析
 
 77.描述下SDWebImage里面给UIImageView加载图片的逻辑
 
 78.不用中间变量,用两种方法交换A和B的值
+1。加法 a b
+a = a + b
+b = a - b
+a = a - b
+2.异或运算 a b
+a = a ^ b
+b = a ^ b
+a = a ^ b
 
+0010 ^ 1010 = 1000(a)
+1000 ^ 1010 = 0010(b)
+1000 ^ 0010 = 1010(a)
 
 79.求最大公约数
+int a = 100,b = 15;
+int temp = 0;
+while (a % b > 0) {
+    temp = a % b;
+    a = b ;
+    b = temp;
+}
+NSLog(@"%d",b);
+
 
 80.模拟栈操作
 
 81.排序算法
+冒泡排序：将已排序部分定义在右边，在遍历未排序部分的过程执行交换，将最大元素移到右边
+选择排序：将已排序部分定义在左边，然后选择未排序部分的最小元素和未排序部分的第一个元素执行交换
+插入排序：将已排序部分定义在左边，将未排序部分的第一个元素插入到已排序部分合适的位置。
+快速排序：
+堆排序：
+
 
 82.折半查找
 
 
 83.在项目什么时候选择使用GCD，什么时候选择NSOperation?
+1.GCD更直观，使用方便，NSOperationQueue使用起来比较复杂
+2.GCD是C语言的API，NSOpearationQueue是OC对象
+3.NSOperationQueue可以使用KVO进行观察
+4.NSOperationQueue可以取消，添加任务依赖，设置最大并行数
+5.GCD提供了dispatch_once和dispatch_after
+7.NSOperation可以继承，进行扩展
+
 
 84.KVO，NSNotification，delegate及block区别
 
@@ -380,11 +419,14 @@ CoreText可以解决复杂文字内容排版问题。CoreImage可以处理图片
 自己创建的Timer，加入到哪个线程的RunLoop中就运行在哪个线程。
 
 86.id和NSObject＊的区别
-
+id是一个objc_object指针，定义是
+typedef struct objc_object *id,id可以理解为对象的指针，可以指向任何类型的OC对象
+NSObject *只能指向继承自NSObject的对象，而基类还有NSProxy，所以NSObject *是id的子集
 
 
 87.static关键字的作用
-
+static修饰局部变量，改变变量的作用域为全局，当程序退出时，才会被销毁
+static修饰全局变量，修改全局变量的作用域，生命周期不会改，修改了使用范围
 https://blog.csdn.net/wujakf/article/details/80229148
 
 #endif /* ______h */

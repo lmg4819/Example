@@ -35,10 +35,6 @@
         // 做自己的业务逻辑
     }
     
-   
-
-   
-    
     return YES;
 }
 
@@ -54,30 +50,56 @@
     userActivity.userInfo = @{@"testKey" : @"testValue"};
     self.userActivity = userActivity;
     
+//    NSMutableArray *array = @[@12,@8,@9,@6,@10].mutableCopy;
+//    //maopaofa
+//    for (int i=0; i<(int)array.count; i++) {
+//        for (int j=0;j<array.count-i-1; j++) {
+//            if ([array[j] intValue] > [array[j+1] intValue]) {
+//                [array exchangeObjectAtIndex:j withObjectAtIndex:j+1];
+//            }
+//        }
+//    }
+//    NSLog(@"---%@--",array);
     
-//    dispatch_queue_t queue = dispatch_queue_create(0, NULL);
-//
-//    dispatch_apply(10, queue, ^(size_t i) {
-//        NSLog(@"%@------%zu",[NSThread currentThread],i);
-//    });
+    /*
+     12 8 9 6 10
+     8 12 9 6 10
+     6 12 9 8 10
+     
+     */
+//        NSMutableArray *array = @[@12,@8,@9,@6,@10].mutableCopy;
+//        //选择
+//        for (int i=0; i<(int)array.count-1; i++) {
+//            for (int j=i+1;j<array.count; j++) {
+//                if ([array[i] intValue] > [array[j] intValue]) {
+//                    [array exchangeObjectAtIndex:i withObjectAtIndex:j];
+//                }
+//            }
+//        }
+//        NSLog(@"---%@--",array);
+
     
+    /*
+     12 8 9 6 10
+     8 12 9 6 10
+     8 9 12 6 10
+     6 8 9 12 10
+     6 8 9 10 12
+     */
+//            NSMutableArray *array = @[@12,@8,@9,@6,@10].mutableCopy;
+//            //插入
+//            for (int i=1; i<(int)array.count; i++) {
+//                NSNumber *temp = array[i];
+//                for (int j=i-1;j>=0; j--) {
+//                    if ([array[j] intValue] > [temp intValue]) {
+//                        array[j+1] = array[j];
+//                        array[j] = temp;
+//                    }
+//                }
+//            }
+//            NSLog(@"---%@--",array);
     
-//    EOCDog *dog = [EOCDog new];
-//    [dog setValue:@"23456" forKey:@"name"];
-//    NSString* name = [dog valueForKey:@"name"];
-//    NSLog(@"------%@------",name);
-//
-//
-//    [dog setValue:nil forKey:@"hello"];
-//
-//
-//    [dog setValue:nil forKey:@"count"];
-//    CGFloat width = [UIScreen mainScreen].bounds.size.width;
-//    NSLog(@"%f",width);
-    @autoreleasepool {
-        
-    }
-    self.isIphonex = isIPhoneXSeries();
+
     
 #if defined(DEBUG)||defined(_DEBUG)
     [[JPFPSStatus sharedInstance] open];
