@@ -120,7 +120,7 @@ DEPENDENCIES:
   - "UITableView+FDTemplateLayoutCell (~> 1.6)"
   - YTKKeyValueStore (~> 0.1.2)
   - YTKNetwork (= 2.0.4)
-  - YYCache
+  - YYCache (~> 1.0.4)
   - YYModel (~> 1.0.4)
   - YZDisplayViewController (~> 1.0.6)
   - ZYCornerRadius (~> 1.0.2)
@@ -208,6 +208,6 @@ SPEC CHECKSUMS:
   YZDisplayViewController: 621f737a9aa3dfbc95a901e89e5e7c4b2ea6ef79
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: 23503369f49fc04d77a7922da62dfc2565b44080
+PODFILE CHECKSUM: 6ad01e975180954598564965170285ec2c26979c
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

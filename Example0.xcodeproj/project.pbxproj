@@ -280,6 +280,7 @@
 		920BEC02216F463300DDE9F3 /* Capture5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Capture5.m; sourceTree = "<group>"; };
 		920BEC05216F498300DDE9F3 /* Capture6.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capture6.h; sourceTree = "<group>"; };
 		920BEC06216F498300DDE9F3 /* Capture6.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Capture6.m; sourceTree = "<group>"; };
+		920C9DE02266B72200E9EC7F /* 面试题回顾.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "面试题回顾.h"; sourceTree = "<group>"; };
 		920CAE38225EE03F00B7229B /* static关键字.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "static关键字.md"; sourceTree = "<group>"; };
 		920CED9A226024D100A7A918 /* Coders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Coders.h; sourceTree = "<group>"; };
 		920CED9B226024D100A7A918 /* Coders.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Coders.m; sourceTree = "<group>"; };
@@ -295,6 +296,7 @@
 		921913E3215F746900508F46 /* YTKUrlArgumentsFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKUrlArgumentsFilter.h; sourceTree = "<group>"; };
 		921913F1215F7EBC00508F46 /* UploadImageAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadImageAPI.m; sourceTree = "<group>"; };
 		921913F2215F7EBC00508F46 /* UploadImageAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadImageAPI.h; sourceTree = "<group>"; };
+		923B7A6422672F950049C930 /* JSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObject.h; sourceTree = "<group>"; };
 		9249E33D225F31B700CFEE58 /* EOCHello.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EOCHello.h; sourceTree = "<group>"; };
 		9249E33E225F31B700CFEE58 /* EOCHello.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EOCHello.m; sourceTree = "<group>"; };
 		9249E343225F3BF500CFEE58 /* OrderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderItem.h; sourceTree = "<group>"; };
@@ -767,6 +769,8 @@
 		92BCAEA921465FFF00D30B1E /* Example0 */ = {
 			isa = PBXGroup;
 			children = (
+				923B7A6422672F950049C930 /* JSObject.h */,
+				920C9DE02266B72200E9EC7F /* 面试题回顾.h */,
 				920CEDA92260703F00A7A918 /* UIViewController+EOCDealloc.h */,
 				920CEDAA2260703F00A7A918 /* UIViewController+EOCDealloc.m */,
 				920CAE37225EE01F00B7229B /* 问题和答案集合 */,
@@ -902,7 +906,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Example0/Pods-Example0-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Example0/Pods-Example0-resources.sh",
 				"${PODS_ROOT}/CYPExtension/CYPExtension/CYPRefresh/Refresh.bundle",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/JSPatch/JSPatch/JSPatch.js",
@@ -921,7 +925,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example0/Pods-Example0-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example0/Pods-Example0-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

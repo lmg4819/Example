@@ -113,8 +113,47 @@ static int countIndex = 0;
     countIndex ++;
     NSLog(@"==========%d",countIndex);
 }
+/*
+ 1同步执行+串行队列：不创建新队列，串行执行任务
+ 2同步执行+主队列：主线程调用，死锁卡住不执行；其他线程调用，没有开启新线程，串行执行任务
+ 3同步执行+并行队列：不创建新线程，串行执行任务
+ 
+ 4异步执行+串行队列：创建一条新线程，串行执行任务
+ 5异步执行+主队列：没有开启新线程，串行执行任务
+ 6异步执行+并行队列：创建新线程，并发执行任务
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    dispatch_queue_t queue = dispatch_queue_create("cheyipai.concurrent.com", DISPATCH_QUEUE_CONCURRENT);
+    
+//    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    
+
+//    dispatch_queue_t queue = dispatch_queue_create("cheyipai.serial.com", DISPATCH_QUEUE_SERIAL);
+    
+//    dispatch_queue_t queue = dispatch_get_main_queue();
+
+    dispatch_async(queue, ^{
+        NSLog(@"11111------%@",[NSThread currentThread]);
+    });
+    
+    dispatch_async(queue, ^{
+        NSLog(@"22222------%@",[NSThread currentThread]);
+    });
+    
+    dispatch_async(queue, ^{
+        NSLog(@"33333------%@",[NSThread currentThread]);
+    });
+    
+    dispatch_async(queue, ^{
+        NSLog(@"44444------%@",[NSThread currentThread]);
+    });
+    
+    dispatch_async(queue, ^{
+        NSLog(@"55555------%@",[NSThread currentThread]);
+    });
+    
     // Do any additional setup after loading the view, typically from a nib
 //    OrderItem *item0 = [OrderItem new];
 //    OrderItem *item1 = [OrderItem new];
@@ -221,7 +260,7 @@ static int countIndex = 0;
 {
     self.currentIndex = index;
     
-    NSLog(@"%d",index);
+    NSLog(@"%lu",(unsigned long)index);
 }
 
 - (void)textTagCollectionView:(TTGTextTagCollectionView *)textTagCollectionView

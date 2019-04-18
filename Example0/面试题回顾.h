@@ -188,7 +188,11 @@ function (){
     }while(message != quit)
 }
 
-31.
+31.objc通过什么机制来进行内存管理
+ARC（自动引用计数），通过retainCount来决定对象是否应该被释放，每次RunLoop的时候，都会检查对象的retainCount,当对象的引用计数为0时，调用dealloc方法释放对象。
+
+
+32.ARC通过什么方式帮助开发者管理内存
 
 
 
