@@ -188,13 +188,111 @@ function (){
     }while(message != quit)
 }
 
-31.objc通过什么机制来进行内存管理
-ARC（自动引用计数），通过retainCount来决定对象是否应该被释放，每次RunLoop的时候，都会检查对象的retainCount,当对象的引用计数为0时，调用dealloc方法释放对象。
+31.不手动指定autoreleasePool的情况下，一个autoreleasePool什么时候释放
+1.所有的autorelease的对象，在出了作用域后，会被添加到最近创建的自动释放池中，并会在当前的RunLoop迭代结束时释放
+2.从程序开始加载到加载完成是一个完整的事件循环，然后会停下来，等待用户交互，用户的每一次交互都会启动一次运行循环，来处理
+用户所有的点击事件和触摸事件
+3.viewDidLoad和viewWillAppear属于同一循环，ViewdidAppear时已经被释放了
 
 
-32.ARC通过什么方式帮助开发者管理内存
+32.BAD_ACCESS在什么时候会出现
+1.野指针
+2.死循环
+3.访问一个已经释放了的对象的成员变量，或者发消息
 
+
+33.苹果是如何实现autoreleasePool的
+
+
+34.使用block什么时候会发生循环引用，如何结局？
+一个对象强引用了block,block又强引用了这个对象，就会发生循环引用，使用__block或者__weak来修饰对象
+
+35.在block内如何修改外部变量
+__block,__block所起的作用就是标记某对象，把给对象的内存地址copy到堆上，然后再对其进行修改
+
+36.使用系统的某些blockAPI时，是否需要考虑循环引用
+一般不需要
+
+37.GCD的队列（dispatch_queue_t）分哪两种类型
+串行队列和并行队列
+
+38.如何用GCD同步若干个异步调用？
+dispatch_group_t
+
+39.dispatch_barrier_async的作用是什么？
+在并行队列中，为了保证某些任务的正常运行，需要等到一些任务完成后才能继续进行下去，使用
+dispatch_barrier_async来等待之前任务完成，避免数据竞争等问题。
+
+
+40.苹果为什么要废弃dispatch_get_current_queue()函数
+dispatch_get_current_queuet容易造成死锁
+
+
+41.以下代码执行结果如何
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    NSLog(@"1");
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        NSLog(@"2");
+    });
+    NSLog(@"3");
+}
+发生主线程锁死
+
+42.
 
 
 
 #endif /* ______h */
+/*
+ 1.tableView的优化
+ 2.Runtime
+ 3.HTTPS的加密过程
+ 4.weak底层原理
+ 5.两个独立的模块如何通信
+ 6.属性常用修饰词
+ 
+ 1.weak实现原理概括
+ Runtime维护了一个weak表，用于存储指向某个对象的所有weak指针，weak变其实是一个hash表
+ key是所指对象的地址，value是weak指针的地址数组，当对象的引用计数为0时，根据对象的地址，寻找到weak指针的数组，
+ 遍历数组，将其中的数据置为nil，然后把这个对象从weak表中删除，然后清理对象的记录
+ 
+ 
+ 2.tableView的优化
+ 1.正确的复用cell
+ 2.设计统一规格的cell
+ 3.提前计算并缓存好高度，因为heightForRowAtIndexPath是调用最频繁的方法
+ 4.遇到复杂界面时异步绘制
+ 5.减少子视图的层级关系
+ 6.尽量时所有的视图不透明化以及做切圆操作
+ 7.不要动态的add和remove，最好在初始化时加add，然后通过hidden来控制显示隐藏
+ 8.滑动时按需加载，这个在大量图片展示，网络加载的时候很管用
+ 9.使用调试工具分析问题
+ 
+ 3.Runtime
+ 1.消息发送机制和消息转发机制
+ 2.动态添加成员变量的时机
+ 3.为什么可以动态添加方法，而不可以动态添加成员变量
+ 4.category，extension的区别
+ 
+ 4.两个独立的模块如何通信
+ URLRouter
+ 
+ 5.属性常用修饰词
+ atomic/nonatomic
+ strong/weak/copy/unsafe_unretained
+ readonly/readwrite
+ setter/getter
+ 
+ 6.HTTPS的加密过程
+ 1.客户端发起HTTPS连接请求，服务器返回证书（公钥）
+ 2.客户端产生随机对称秘钥
+ 3.使用公钥对对称秘钥加密
+ 4.发送加密后的秘钥（对称）给服务器
+ 5.服务器使用私钥进行解密，双方都拥有了对称秘钥
+ 6.双方通过堆成秘钥加密的密文通信
+ 
+ 
+ 
+ */
